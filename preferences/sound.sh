@@ -1,5 +1,5 @@
 ################################################################################
-#                                   Sound  
+#                                   Sound
 ################################################################################
 
 # Toggle Startup Sound
@@ -9,7 +9,7 @@ function osx_sound_startup_chime {
   if [[ "$enabled" == "true" ]]; then
     sudo nvram -d SystemAudioVolume
   else
-    sudo nvram SystemAudioVolume=%80
+    sudo nvram SystemAudioVolume=" "
   fi
 }
 
