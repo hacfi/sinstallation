@@ -4,6 +4,6 @@ source './groups/jfelchner/login_items.sh'
 source './groups/jfelchner/cleanup.sh'
 
 install_apps
-# set_preferences
+set_preferences
 add_login_items
 cleanup
