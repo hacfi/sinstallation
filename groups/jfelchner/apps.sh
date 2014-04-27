@@ -15,7 +15,6 @@ function install_apps {
   install_rdio
   install_reeder
   install_scansnap
-  install_shush
   install_steam
   install_sparrow
   install_transmission

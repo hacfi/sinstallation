@@ -34,6 +34,7 @@ function install_apps {
   install_pagekite
   install_screenflow
   install_screenhero
+  install_shush
   install_sizeup
   install_sublime_text
   install_undercover
