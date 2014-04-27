@@ -22,6 +22,7 @@ function install_apps {
   install_dropbox
   install_firefox
   install_firefox "nightly"
+  install_flux
   install_git
   install_gitx
   install_google_chrome

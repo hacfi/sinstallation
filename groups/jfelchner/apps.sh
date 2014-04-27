@@ -5,7 +5,6 @@ function install_apps {
   install_airserver
   install_araxis_merge
   install_evernote
-  install_flux
   install_handbrake
   install_kindle
   install_launchbar
