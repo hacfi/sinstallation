@@ -20,11 +20,11 @@ function osx_time_machine_unsupported_network_volumes {
 function osx_time_machine_local_backups {
   local enabled; if [[ "$1" == "enable" ]]; then enabled="enable"; else enabled="disable"; fi
 
-  hash tmutil &> /dev/null && sudo tmutil ${enabled}local
+  sudo tmutil ${enabled}local
 }
 
 function osx_time_machine_add_exclusion {
-  hash tmutil &> /dev/null && sudo tmutil addexclusion -p "$1"
+  sudo tmutil addexclusion -p "$1"
 }
 
 function osx_time_machine_backup_interval {
