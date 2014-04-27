@@ -17,7 +17,6 @@ function install_apps {
   install_or_upgrade_package tmux
   install_or_upgrade_package zsh
 
-  install_adium
   install_dash
   install_dropbox
   install_firefox
