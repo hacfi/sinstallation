@@ -47,4 +47,5 @@ function install_ruby {
   echo 'redcarpet'   >> $RBENV_ROOT/default_gems
 
   rbenv install 2.1.1
+  rbenv global 2.1.1
 }
