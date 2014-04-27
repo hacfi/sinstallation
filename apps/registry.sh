@@ -188,3 +188,15 @@ function install_wunderlist {
 function install_xtrafinder {
   install_disk_image_packaged_app "http://www.trankynam.com/xtrafinder/downloads/XtraFinder.dmg" "XtraFinder.app" "XtraFinder.pkg"
 }
+
+function install_pagekite {
+  local pagekite_local_binary='/usr/local/bin/pagekite.py'
+
+  download_app 'https://pagekite.net/pk/pagekite.py' $pagekite_local_binary
+  chmod 755 "$pagekite_local_binary"
+  mkdir /usr/local/var/run
+  sudo touch /var/log/pagekite.log
+  sudo chown `whoami`:staff /var/log/pagekite.log
+
+  "$pagekite_local_binary" --signup
+}
