@@ -20,7 +20,6 @@ function install_apps {
   install_transmission
   install_transmit
   install_tweetbot
-  install_unarchiver
   install_vmware
   install_wunderlist
   install_xtrafinder

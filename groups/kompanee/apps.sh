@@ -37,6 +37,7 @@ function install_apps {
   install_shush
   install_sizeup
   install_sublime_text
+  install_unarchiver
   install_undercover
   install_vagrant
   install_viscosity
