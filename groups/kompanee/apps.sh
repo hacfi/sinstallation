@@ -33,6 +33,7 @@ function install_apps {
   install_macvim
   install_one_password
   install_screenflow
+  install_screenhero
   install_sizeup
   install_sublime_text
   install_undercover

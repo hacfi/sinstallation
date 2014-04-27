@@ -125,6 +125,10 @@ function install_screenflow {
   install_disk_image_app "http://www.telestream.net/download-files/screenflow/4-5/ScreenFlow-4.5.dmg" "ScreenFlow.app"
 }
 
+function install_screenhero {
+  install_disk_image_app "http://dl.screenhero.com/update/screenhero/Screenhero.dmg" "Screenhero.app"
+}
+
 function install_shush {
   install_mac_app_store_app "Shush.app"
 }
