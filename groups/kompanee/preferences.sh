@@ -232,6 +232,7 @@ function set_preferences {
   osx_time_machine_unsupported_network_volumes                    enabled
   osx_time_machine_local_backups                                  disabled
   osx_time_machine_add_exclusion                                  "$HOME/Boxes"
+  osx_time_machine_add_exclusion                                  "$HOME/Downloads/skip-backup"
   osx_time_machine_backup_interval                                7200
 
   # Trash
