@@ -36,6 +36,7 @@ function install_apps {
   install_screenhero
   install_shush
   install_sizeup
+  install_sparrow
   install_sublime_text
   install_unarchiver
   install_undercover

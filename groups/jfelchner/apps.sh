@@ -16,7 +16,6 @@ function install_apps {
   install_reeder
   install_scansnap
   install_steam
-  install_sparrow
   install_transmission
   install_transmit
   install_tweetbot
