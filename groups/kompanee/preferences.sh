@@ -16,7 +16,7 @@ function set_preferences {
 
   # Appearance
   osx_appearance_font_rendering_mode                              2
-  osx_appearance_font_smoothing_threshold                         6
+  osx_appearance_font_smoothing_threshold                         8
   osx_appearance_sidebar_icons                                    small
 
   # Debugging
