@@ -32,6 +32,7 @@ function install_apps {
   install_little_snitch
   install_macvim
   install_one_password
+  install_screenflow
   install_sizeup
   install_sublime_text
   install_teamviewer
