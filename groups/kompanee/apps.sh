@@ -35,7 +35,6 @@ function install_apps {
   install_screenflow
   install_sizeup
   install_sublime_text
-  install_teamviewer
   install_undercover
   install_vagrant
   install_viscosity
