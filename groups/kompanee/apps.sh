@@ -19,6 +19,7 @@ function install_apps {
 
   install_adium
   install_dash
+  install_dropbox
   install_firefox
   install_firefox "nightly"
   install_git

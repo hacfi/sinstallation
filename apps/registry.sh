@@ -17,6 +17,10 @@ function install_dash {
   install_mac_app_store_app "Dash.app"
 }
 
+function install_dropbox {
+  install_disk_image_app "https://d1ilhw0800yew8.cloudfront.net/client/Dropbox%202.6.31.dmg" "Dropbox.app"
+}
+
 function install_evernote {
   install_disk_image_app "http://cdn1.evernote.com/mac/release/Evernote_402372.dmg" "Evernote.app"
 }
