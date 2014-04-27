@@ -266,13 +266,6 @@ function osx_finder_clickthrough_destroys_selection {
   defaults write com.apple.finder ClickThroughDestroysSelection -bool $enabled
 }
 
-# Toggle whether recent items or just current items are shown under the "Shared" menu
-function osx_finder_recent_locations_in_shared_menu {
-  local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi; shift 1;
-
-  defaults write com.apple.NetworkBrowser EnableAllRecents -bool $enabled
-}
-
 function osx_finder_icon_view_icon_size_and_spacing {
   local size="$1"; shift 1;
   local spacing="$1"; shift 1;

@@ -77,7 +77,6 @@ function set_preferences {
   osx_finder_minimum_playable_preview_size                        100
   osx_finder_autostop_previews_when_scrolling                     disabled
   osx_finder_autostop_previews_when_selection_changes             disabled
-  osx_finder_recent_locations_in_shared_menu                      enabled
   osx_finder_icon_view_icon_size_and_spacing                      40 20 10
 
   # Firewall
