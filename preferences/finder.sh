@@ -238,7 +238,7 @@ function osx_finder_info_pane_expansion {
     Privileges -bool $enabled
 }
 
-# Minimum icon size for playable previews 
+# Minimum icon size for playable previews
 function osx_finder_minimum_playable_preview_size {
   local size="$1"; shift 1;
 

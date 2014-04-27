@@ -3,8 +3,8 @@
 ################################################################################
 
 function osx_spotlight {
-  local enabled; if [[ "$1" == "enabled" ]]; then enabled="on"; else enabled="off"; fi
-  local loaded; if [[ "$1" == "enabled" ]]; then loaded="load"; else loaded="unload"; fi
+  local enabled; if [[ "$1" == "enabled" ]]; then enabled="on";  else enabled="off";   fi
+  local loaded;  if [[ "$1" == "enabled" ]]; then loaded="load"; else loaded="unload"; fi
   shift 1;
 
   if [[ "$enabled" == "off" ]]; then
