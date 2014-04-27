@@ -21,5 +21,4 @@ function install_apps {
   install_transmit
   install_tweetbot
   install_vmware
-  install_xtrafinder
 }

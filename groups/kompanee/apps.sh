@@ -42,6 +42,7 @@ function install_apps {
   install_vagrant
   install_viscosity
   install_wunderlist
+  install_xtrafinder
 
   install_shellwreck
   install_vimwreck
