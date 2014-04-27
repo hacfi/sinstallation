@@ -8,10 +8,6 @@ function osx_screen_sharing {
 
   sudo defaults write /var/db/launchd.db/com.apple.launchd/overrides.plist com.apple.screensharing -dict Disabled -bool $enabled
   sudo sh -c "launchctl $loaded /System/Library/LaunchDaemons/com.apple.screensharing.plist 2> /dev/null"
-
-  # if [[ "$enabled" == "false" ]]; then
-  #   sudo rm -rf /private/etc/ScreenSharing.launchd
-  # fi
 }
 
 function osx_screen_sharing_unencrypted_connection_warnings {
