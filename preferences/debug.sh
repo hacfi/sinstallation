@@ -1,5 +1,5 @@
 ################################################################################
-#                                   Debug       
+#                                   Debug
 ################################################################################
 
 # Toggle Debug Mode
@@ -22,7 +22,7 @@ function osx_debug_mode {
   # Toggle App Store Debug Mode
   defaults write com.apple.appstore ShowDebugMenu -bool $enabled
   defaults write com.apple.appstore WebKitDeveloperExtras -bool $enabled
- 
+
   # Toggle Help Viewer Debug Mode
   defaults write com.apple.helpviewer DevMode -bool $enabled
 
