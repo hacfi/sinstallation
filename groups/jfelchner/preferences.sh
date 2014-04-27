@@ -45,13 +45,7 @@ function set_preferences {
 
   # Locale
   osx_locale_datetime                                                       'America/Chicago'
-  osx_locale_language                                                       en_US
-  osx_locale_measurement_unit                                               english
   osx_locale_24_hour_clock                                                  enabled
-  osx_locale_international_date_format_strings
-
-  # Location
-  osx_location                                                              disabled
 
   # Menu Bar
   osx_menu_bar_airplay                                                      disabled
@@ -61,7 +55,6 @@ function set_preferences {
 
   # System
   osx_system_host_name                                                      poseidon
-  osx_system_recovery_message                                               enabled "If you find this Mac, please call 615-663-9532. There is a reward."
   osx_system_document_versioning                                            disabled
 
   # Tooltips

@@ -104,6 +104,15 @@ function set_preferences {
   # Launchpad
   osx_launchpad_reset
 
+  # Locale
+  osx_locale_datetime                                                       'America/Chicago'
+  osx_locale_language                                                       en_US
+  osx_locale_measurement_unit                                               english
+  osx_locale_international_date_format_strings
+
+  # Location
+  osx_location                                                              disabled
+
   # Login
   osx_login_auto_login_user                                       disabled
   osx_login_fast_user_switching                                   disabled
@@ -222,6 +231,7 @@ function set_preferences {
   osx_system_update_schedule                                      daily
   osx_system_restart_on_hang                                      enabled
   osx_system_max_number_of_recent_items                           0
+  osx_system_recovery_message                                     enabled "If you find this Mac, please call 615-663-9532. There is a reward."
 
   # Time Machine
   osx_time_machine_ask_to_use_new_disks_for_backup                disabled
