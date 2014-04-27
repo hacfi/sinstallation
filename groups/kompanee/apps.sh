@@ -41,6 +41,7 @@ function install_apps {
   install_undercover
   install_vagrant
   install_viscosity
+  install_wunderlist
 
   install_shellwreck
   install_vimwreck
