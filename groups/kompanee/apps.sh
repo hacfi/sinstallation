@@ -32,6 +32,7 @@ function install_apps {
   install_little_snitch
   install_macvim
   install_one_password
+  install_pagekite
   install_screenflow
   install_screenhero
   install_sizeup

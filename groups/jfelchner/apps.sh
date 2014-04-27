@@ -25,5 +25,4 @@ function install_apps {
   install_vmware
   install_wunderlist
   install_xtrafinder
-  install_pagekite
 }
