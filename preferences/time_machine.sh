@@ -30,5 +30,12 @@ function osx_time_machine_add_exclusion {
 function osx_time_machine_backup_interval {
   local interval="$1"; shift 1;
 
-  sudo defaults write /System/Library/LaunchDaemons/com.apple.backupd-auto StartInterval -int $interval
+  $path_to_plistbuddy -c "Delete :LaunchEvents:com.apple.xpc.activity:com.apple.backupd-auto:Interval" /System/Library/LaunchDaemons/com.apple.backupd-auto.plist 2> /dev/null
+  $path_to_plistbuddy -c "Add :LaunchEvents:com.apple.xpc.activity:com.apple.backupd-auto:Interval integer $interval" /System/Library/LaunchDaemons/com.apple.backupd-auto.plist 2> /dev/null
+
+  $path_to_plistbuddy -c "Delete :LaunchEvents:com.apple.xpc.activity:com.apple.backupd-auto:Delay" /System/Library/LaunchDaemons/com.apple.backupd-auto.plist 2> /dev/null
+  $path_to_plistbuddy -c "Add :LaunchEvents:com.apple.xpc.activity:com.apple.backupd-auto:Delay integer $interval" /System/Library/LaunchDaemons/com.apple.backupd-auto.plist 2> /dev/null
+
+  osx_preferences_synchronize com.apple.backupd
+  osx_preferences_synchronize com.apple.backupd-auto
 }
