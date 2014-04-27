@@ -32,9 +32,6 @@ function osx_debug_mode {
   # Toggle iBooks Debug Mode
   defaults write com.apple.iBooksX BKShowDebugMenu -bool $enabled
 
-  # Toggle Finder Debug Mode
-  defaults write com.apple.finder ShowDebugMenu -bool $enabled
-
   # Toggle PhotoBooth Debug Mode
   defaults write com.apple.PhotoBooth EnableDebugMenu -bool $enabled
 
