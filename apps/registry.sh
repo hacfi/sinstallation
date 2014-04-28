@@ -204,11 +204,13 @@ function install_xtrafinder {
 function install_pagekite {
   local pagekite_local_binary='/usr/local/bin/pagekite.py'
 
-  download_app 'https://pagekite.net/pk/pagekite.py' $pagekite_local_binary
-  chmod 755 "$pagekite_local_binary"
-  mkdir /usr/local/var/run
-  sudo touch /var/log/pagekite.log
-  sudo chown `whoami`:staff /var/log/pagekite.log
+  if ! [ -a "$pagekite_local_binary" ]; then
+    download_app 'https://pagekite.net/pk/pagekite.py' $pagekite_local_binary
+    chmod 755 "$pagekite_local_binary"
+    mkdir /usr/local/var/run
+    sudo touch /var/log/pagekite.log
+    sudo chown `whoami`:staff /var/log/pagekite.log
 
-  "$pagekite_local_binary" --signup
+    "$pagekite_local_binary" --signup
+  fi
 }
