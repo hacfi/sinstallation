@@ -70,7 +70,7 @@ function install_handbrake {
 }
 
 function install_iterm {
-  install_compressed_app "http://www.iterm2.com/beta/latest" "iTerm.app"
+  install_compressed_app "https://iterm2.googlecode.com/files/iTerm2-1_0_0_20120726.zip" "iTerm.app"
 }
 
 function install_keyremap4macbook {
