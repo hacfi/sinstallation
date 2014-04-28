@@ -17,5 +17,4 @@ function install_apps {
   install_steam
   install_transmission
   install_tweetbot
-  install_vmware
 }

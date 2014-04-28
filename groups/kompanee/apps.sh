@@ -44,6 +44,7 @@ function install_apps {
   install_undercover
   install_vagrant
   install_viscosity
+  install_vmware
   install_wunderlist
   install_xtrafinder
 
