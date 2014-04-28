@@ -16,7 +16,6 @@ function install_apps {
   install_scansnap
   install_steam
   install_transmission
-  install_transmit
   install_tweetbot
   install_vmware
 }
