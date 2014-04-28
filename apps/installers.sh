@@ -31,7 +31,7 @@ function install_disk_image_packaged_app {
   local url="$1"; shift 1;
   local app_name="$1"; shift 1;
   local package_name="$1"; shift 1;
-  local local_file="$HOME/Downloads/$app_name.dmg"; shift 1;
+  local local_file="$HOME/Downloads/${app_name}.dmg"; shift 1;
 
   if ! [ -a "/Applications/$app_name" ]; then
     download_app "$url" "$local_file"
@@ -48,7 +48,7 @@ function install_package {
   local url="$1"; shift 1;
   local app_name="$1"; shift 1;
   local package_name="$1"; shift 1;
-  local local_file="$HOME/Downloads/$app_name.pkg";
+  local local_file="$HOME/Downloads/${app_name}.pkg";
   local installation_directory; if [ -n "$1" ]; then installation_directory="$1"; else installation_directory="/Applications/$app_name"; fi; shift 1;
 
   if ! [ -a "$installation_directory" ]; then
@@ -62,7 +62,7 @@ function install_disk_image_with_installer {
   local url="$1"; shift 1;
   local app_name="$1"; shift 1;
   local path_to_installer="$1"; shift 1;
-  local local_file="$HOME/Downloads/$app_name.dmg"; shift 1;
+  local local_file="$HOME/Downloads/${app_name}.dmg"; shift 1;
 
   if ! [ -a "/Applications/$app_name" ]; then
     download_app "$url" "$local_file"
@@ -87,7 +87,7 @@ function install_mac_app_store_app {
 function uncompress_and_install {
   local app_name="$1"; shift 1;
   local compressed_file="$1"; shift 1;
-  local extraction_dir="$HOME/Downloads/$app_name"
+  local extraction_dir="$HOME/Downloads/${app_name}"
 
   mkdir -p "$extraction_dir"
 
