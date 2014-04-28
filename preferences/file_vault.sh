@@ -5,10 +5,8 @@
 function file_vault {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="enable"; else enabled="disable"; fi; shift 1;
 
-  if [[ "$(sudo fdesetup status)" == "FileVault is Off" ]]; then
+  if [[ "$(sudo fdesetup status)" == "FileVault is Off." ]]; then
     echo "Enabling FileVault"
     sudo fdesetup $enabled
-  else
-    echo "FileVault already enabled"
   fi
 }
