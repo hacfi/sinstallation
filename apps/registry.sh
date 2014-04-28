@@ -182,7 +182,7 @@ function install_undercover {
 }
 
 function install_vagrant {
-  install_disk_image_packaged_app "https://dl.bintray.com/mitchellh/vagrant/vagrant_1.5.4.dmg" "Vagrant/bin/vagrant" "Vagrant.pkg"
+  install_disk_image_packaged_app "https://dl.bintray.com/mitchellh/vagrant/vagrant_1.5.4.dmg" "Vagrant" "Vagrant.pkg"
 }
 
 function install_viscosity {
