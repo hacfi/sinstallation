@@ -1,7 +1,7 @@
-source './groups/deleblanc/apps.sh'
-source './groups/deleblanc/preferences.sh'
-source './groups/deleblanc/login_items.sh'
-source './groups/deleblanc/cleanup.sh'
+source './groups/dleblanc/apps.sh'
+source './groups/dleblanc/preferences.sh'
+source './groups/dleblanc/login_items.sh'
+source './groups/dleblanc/cleanup.sh'
 
 install_apps
 set_preferences
