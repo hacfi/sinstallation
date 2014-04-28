@@ -19,6 +19,7 @@ function install_apps {
 
   install_dash
   install_dropbox
+  install_evernote
   install_firefox
   install_firefox "nightly"
   install_flux

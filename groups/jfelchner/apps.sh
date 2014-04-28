@@ -4,7 +4,6 @@ function install_apps {
   # install_adobe_creative_suite
   install_airserver
   install_araxis_merge
-  install_evernote
   install_handbrake
   install_kindle
   install_launchbar
