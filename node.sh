@@ -34,6 +34,8 @@ function install_node {
 
   install_nodenv_plugin "OiNutter" "node-build"
 
-  nodenv install 0.10.26
-  nodenv global 0.10.26
+  if ! [[ $(node --version) =~ 0.10.26 ]]; then
+    nodenv install 0.10.26
+    nodenv global 0.10.26
+  fi
 }
