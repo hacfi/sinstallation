@@ -47,6 +47,9 @@ function set_preferences {
   osx_locale_datetime                                                       'America/Chicago'
   osx_locale_24_hour_clock                                                  enabled
 
+  # Location
+  osx_location                                                              disabled
+
   # Menu Bar
   osx_menu_bar_airplay                                                      disabled
 

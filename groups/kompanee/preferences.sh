@@ -110,9 +110,6 @@ function set_preferences {
   osx_locale_measurement_unit                                               english
   osx_locale_international_date_format_strings
 
-  # Location
-  osx_location                                                              disabled
-
   # Login
   osx_login_auto_login_user                                       disabled
   osx_login_fast_user_switching                                   disabled
