@@ -74,7 +74,7 @@ function install_iterm {
 }
 
 function install_keyremap4macbook {
-  install_disk_image_packaged_app "https://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-9.3.0.dmg" "KeyRemap4MacBook" "KeyRemap4MacBook.pkg"
+  install_disk_image_packaged_app "https://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-9.3.0.dmg" "KeyRemap4MacBook.app" "KeyRemap4MacBook.pkg"
 }
 
 function install_kindle {
