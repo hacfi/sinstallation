@@ -8,5 +8,7 @@ function file_vault {
   if [[ "$(sudo fdesetup status)" == "FileVault is Off" ]]; then
     echo "Enabling FileVault"
     sudo fdesetup $enabled
+  else
+    echo "FileVault already enabled"
   fi
 }
