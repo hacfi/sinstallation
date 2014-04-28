@@ -6,7 +6,7 @@ function install_adium {
 }
 
 function install_airserver {
-  install_disk_image_app "http://dl.airserver.com/mac/AirServer-5.0.4.0.dmg" "AirServer.app"
+  install_disk_image_app "http://dl.airserver.com/mac/AirServer-5.0.5.dmg" "AirServer.app"
 }
 
 function install_araxis_merge {
@@ -27,10 +27,10 @@ function install_evernote {
 
 function install_firefox {
   if [[ "$1" == "nightly" ]]; then
-    local url="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/firefox-30.0a1.en-US.mac.dmg"
+    local url="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/firefox-31.0a1.en-US.mac.dmg"
     local app_name="FirefoxNightly.app"
   else
-    local url="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/27.0/mac/en-US/Firefox%2027.0.dmg"
+    local url="https://download-installer.cdn.mozilla.net/pub/firefox/releases/28.0/mac/en-US/Firefox%2028.0.dmg"
     local app_name="Firefox.app"
   fi
 
@@ -66,11 +66,11 @@ function install_gpg {
 }
 
 function install_handbrake {
-  install_disk_image_app "http://softlayer-ams.dl.sourceforge.net/project/handbrake/0.9.9/HandBrake-0.9.9-MacOSX.6_GUI_x86_64.dmg" "HandBrake.app"
+  install_disk_image_app "http://handbrake.fr/rotation.php?file=HandBrake-0.9.9-MacOSX.6_GUI_x86_64.dmg" "HandBrake.app"
 }
 
 function install_iterm {
-  install_compressed_app "http://www.iterm2.com/downloads/beta/iTerm2-1_0_0_20140112.zip" "iTerm.app"
+  install_compressed_app "http://www.iterm2.com/beta/latest" "iTerm.app"
 }
 
 function install_keyremap4macbook {
@@ -86,7 +86,7 @@ function install_launchbar {
 }
 
 function install_little_snitch {
-  install_disk_image_with_installer "http://www.obdev.at/downloads/LittleSnitch/nightly/LittleSnitch-3.3.1-nightly-(4080).dmg" "Little Snitch Configuration.app" "Little Snitch Installer.app/Contents/MacOS/Little Snitch Installer"
+  install_disk_image_with_installer "http://www.obdev.at/downloads/LittleSnitch/nightly/LittleSnitch-3.3.1-nightly-(4086).dmg" "Little Snitch Configuration.app" "Little Snitch Installer.app/Contents/MacOS/Little Snitch Installer"
 }
 
 function install_macpar {
@@ -94,7 +94,7 @@ function install_macpar {
 }
 
 function install_macvim {
-  install_compressed_app "https://github.com/b4winckler/macvim/releases/download/snapshot-72/MacVim-snapshot-72-Mavericks.tbz" "MacVim.app"
+  install_compressed_app "https://github.com/b4winckler/macvim/releases/download/snapshot-73/MacVim-snapshot-73-Mavericks.tbz" "MacVim.app"
 }
 
 function install_mplayerx {
@@ -106,7 +106,7 @@ function install_name_mangler {
 }
 
 function install_one_password {
-  install_compressed_app "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-4.0.9.zip" "1Password 4.app"
+  install_compressed_app "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-4.3.zip" "1Password 4.app"
 }
 
 function install_pocket {
@@ -178,11 +178,11 @@ function install_unarchiver {
 }
 
 function install_undercover {
-  install_package "http://assets.undercoverhq.com/client/5.6/undercover_mac.pkg" "Undercover.app" "Undercover.app.pkg" "/usr/local/uc/bin/uc.app"
+  install_package "http://assets.undercoverhq.com/client/6.0/undercover_mac.pkg" "Undercover.app" "Undercover.app.pkg" "/usr/local/uc/bin/uc.app"
 }
 
 function install_vagrant {
-  install_disk_image_packaged_app "https://dl.bintray.com/mitchellh/vagrant/vagrant_1.5.0.dmg" "Vagrant/bin/vagrant" "Vagrant.pkg"
+  install_disk_image_packaged_app "https://dl.bintray.com/mitchellh/vagrant/vagrant_1.5.4.dmg" "Vagrant/bin/vagrant" "Vagrant.pkg"
 }
 
 function install_viscosity {
