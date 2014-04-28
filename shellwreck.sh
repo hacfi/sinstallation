@@ -5,6 +5,12 @@ function install_shellwreck {
 
   current_dir="$PWD"
 
+  if ! [ -d $HOME/.ssh ]; then
+    mkdir "$HOME/.ssh"
+    chmod 700 "$HOME/.ssh"
+    chown `whoami`:staff "$HOME/.ssh"
+  fi
+
   if [ -d $HOME/.shell/.git ]; then
     cd $HOME/.shell && git pull
   else
