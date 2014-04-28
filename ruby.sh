@@ -46,6 +46,8 @@ function install_ruby {
   echo 'pygments.rb' >> $RBENV_ROOT/default_gems
   echo 'redcarpet'   >> $RBENV_ROOT/default_gems
 
-  rbenv install 2.1.1
-  rbenv global 2.1.1
+  if ! [[ $(ruby --version) =~ 2.1.1 ]]; then
+    rbenv install 2.1.1
+    rbenv global 2.1.1
+  fi
 }
