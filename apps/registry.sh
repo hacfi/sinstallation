@@ -113,6 +113,10 @@ function install_one_password {
   install_compressed_app "https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-4.3.zip" "1Password 4.app"
 }
 
+function install_omnigraffle {
+  install_mac_app_store_app "OmniGraffle.app"
+}
+
 function install_pocket {
   install_mac_app_store_app "Pocket.app"
 }
