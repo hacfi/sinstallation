@@ -177,6 +177,10 @@ function install_thunderbird {
   install_disk_image_app "http://download-origin.cdn.mozilla.net/pub/mozilla.org/thunderbird/releases/24.3.0/mac/en-US/Thunderbird%2024.3.0.dmg" "Thunderbird.app"
 }
 
+function install_todo_pro {
+  install_mac_app_store_app "Todo Pro.app"
+}
+
 function install_transmission {
   install_disk_image_app "http://download.transmissionbt.com/files/Transmission-2.82.dmg" "Transmission.app"
 }
