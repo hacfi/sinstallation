@@ -157,6 +157,10 @@ function install_sparrow {
   install_disk_image_app "http://download.sparrowmailapp.com/appcast/Sparrow-latest.dmg" "Sparrow.app"
 }
 
+function install_spotify {
+  install_disk_image_app "http://download.spotify.com/Spotify.dmg" "Spotify.app"
+}
+
 function install_steam {
   install_disk_image_app "http://media.steampowered.com/client/installer/steam.dmg" "Steam.app"
 }
