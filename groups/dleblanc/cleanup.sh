@@ -1,10 +1,13 @@
 function cleanup {
   sudo rm -rf "/Applications/Dashboard.app"
   sudo rm -rf "/Applications/DVD Player.app"
+  sudo rm -rf "/Applications/Game Center.app"
+  sudo rm -rf "/Applications/iBooks.app"
   sudo rm -rf "/Applications/Launchpad.app"
   sudo rm -rf "/Applications/Mail.app"
   sudo rm -rf "/Applications/Messages.app"
   sudo rm -rf "/Applications/Mission Control.app"
+  sudo rm -rf "/Applications/Notes.app"
   sudo rm -rf "/Applications/Photo Booth.app"
   sudo rm -rf "/Applications/Reminders.app"
   sudo rm -rf "/Applications/Stickies.app"
