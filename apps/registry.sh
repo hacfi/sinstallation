@@ -141,6 +141,10 @@ function install_sizeup {
   install_compressed_app "http://www.irradiatedsoftware.com/download/SizeUp.zip" "SizeUp.app"
 }
 
+function install_slack {
+  install_mac_app_store_app "Slack.app"
+}
+
 function install_sparrow {
   install_disk_image_app "http://download.sparrowmailapp.com/appcast/Sparrow-latest.dmg" "Sparrow.app"
 }
