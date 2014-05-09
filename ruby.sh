@@ -51,4 +51,7 @@ function install_ruby {
     curl -fsSL https://gist.github.com/mislav/a18b9d7f0dc5b9efc162.txt | rbenv install --patch 2.1.1
     $RBENV_ROOT/bin/rbenv global 2.1.1
   fi
+
+  $RBENV_ROOT/bin/rbenv communize --all
+  $RBENV_ROOT/bin/rbenv rbenv alias --auto
 }
