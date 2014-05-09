@@ -38,6 +38,7 @@ function install_apps {
   install_screenhero
   install_shush
   install_sizeup
+  install_slack
   install_sparrow
   install_sublime_text
   install_transmit
