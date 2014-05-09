@@ -5,7 +5,6 @@ function cleanup {
   sudo rm -rf "/Applications/iBooks.app"
   sudo rm -rf "/Applications/Launchpad.app"
   sudo rm -rf "/Applications/Mail.app"
-  sudo rm -rf "/Applications/Messages.app"
   sudo rm -rf "/Applications/Mission Control.app"
   sudo rm -rf "/Applications/Notes.app"
   sudo rm -rf "/Applications/Photo Booth.app"
