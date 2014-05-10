@@ -11,7 +11,6 @@ function set_preferences {
   osx_desktop_displayed_item                        external_hard_drives    enabled
   osx_desktop_displayed_item                        mounted_servers         enabled
   osx_desktop_displayed_item                        removable_media         enabled
-  osx_desktop_icon_size                                                     40 20
 
   # Dock
   osx_dock_itunes_notifications                                             disabled

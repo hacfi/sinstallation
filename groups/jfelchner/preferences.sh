@@ -15,7 +15,6 @@ function set_preferences {
   osx_desktop_displayed_item                        external_hard_drives    enabled
   osx_desktop_displayed_item                        mounted_servers         disabled
   osx_desktop_displayed_item                        removable_media         enabled
-  osx_desktop_icon_size                                                     40 20
 
   # Displays
   osx_displays_auto_brightness_adjustment                                   disabled
