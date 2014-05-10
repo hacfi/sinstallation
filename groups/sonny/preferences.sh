@@ -26,6 +26,9 @@ function set_preferences {
   osx_itunes_automatic_sync                                                 disabled
   osx_itunes_media_key_access                                               disabled
 
+  # Keyboard
+  osx_keyboard_default_to_alternate_function_keys                           disabled
+
   # Locale
   osx_locale_datetime                                                       'America/Chicago'
 
