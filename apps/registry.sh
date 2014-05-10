@@ -90,7 +90,7 @@ function install_launchbar {
 }
 
 function install_little_snitch {
-  install_disk_image_with_installer "http://www.obdev.at/downloads/LittleSnitch/nightly/LittleSnitch-3.3.1-nightly-(4086).dmg" "Little Snitch Configuration.app" "Little Snitch Installer.app/Contents/MacOS/Little Snitch Installer"
+  install_disk_image_with_installer "http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-3.3.dmg" "Little Snitch Configuration.app" "Little Snitch Installer.app/Contents/MacOS/Little Snitch Installer"
 }
 
 function install_macpar {
