@@ -29,6 +29,9 @@ function set_preferences {
   # Locale
   osx_locale_datetime                                                       'America/Chicago'
 
+  # Security
+  osx_system_recovery_message                                               enabled "If you find this Mac, please call (512) 739-9268. There is a reward."
+
   # System
   osx_system_host_name                                                      ebeneezer
 
