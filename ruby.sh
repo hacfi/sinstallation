@@ -53,5 +53,5 @@ function install_ruby {
   fi
 
   $RBENV_ROOT/bin/rbenv communize --all
-  $RBENV_ROOT/bin/rbenv rbenv alias --auto
+  $RBENV_ROOT/bin/rbenv alias --auto
 }
