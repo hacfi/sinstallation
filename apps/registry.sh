@@ -90,7 +90,7 @@ function install_kindle {
 }
 
 function install_launchbar {
-  install_disk_image_app "http://www.obdev.at/downloads/launchbar/LaunchBar-5.6.2.dmg" "LaunchBar.app"
+  install_disk_image_app "http://www.obdev.at/downloads/launchbar/LaunchBar-5.6.4.dmg" "LaunchBar.app"
 }
 
 function install_little_snitch {
