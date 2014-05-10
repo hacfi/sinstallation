@@ -77,6 +77,10 @@ function install_iterm {
   install_compressed_app "https://iterm2.googlecode.com/files/iTerm2-1_0_0_20120726.zip" "iTerm.app"
 }
 
+function install_kaleidoscope {
+  install_compressed_app "http://www.kaleidoscopeapp.com/download" "Kaleidoscope.app"
+}
+
 function install_keyremap4macbook {
   install_disk_image_packaged_app "https://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-9.3.0.dmg" "KeyRemap4MacBook.app" "KeyRemap4MacBook.pkg"
 }
