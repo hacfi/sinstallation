@@ -141,7 +141,7 @@ function set_preferences {
   # Mission Control
   osx_mission_control_dashboard_visibility                        disabled
   osx_mission_control_group_by_app                                disabled
-  osx_mission_control_animation                                   0.5
+  osx_mission_control_animation                                   0.1
 
   # Mouse / Trackpad / Touchpad
   osx_trackpad_tap_to_click                                       enabled
