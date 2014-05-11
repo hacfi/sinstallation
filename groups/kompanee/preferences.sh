@@ -98,8 +98,8 @@ function set_preferences {
   osx_keyboard_default_to_alternate_function_keys                 enabled
   osx_keyboard_control_access                                     all_controls_including_dropdowns
   osx_keyboard_auto_dim                                           enabled 300
-  osx_keyboard_key_repeat_delay                                   5
-  osx_keyboard_key_repeat_rate                                    1
+  osx_keyboard_key_repeat_delay                                   15
+  osx_keyboard_key_repeat_rate                                    2
 
   # Launchpad
   osx_launchpad_reset
