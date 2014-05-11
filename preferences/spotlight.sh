@@ -18,15 +18,18 @@ function osx_spotlight {
     sudo chmod 777 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
   fi
 
-  if [[ "$enabled" == "unload" ]]; then
-    sudo sh -c "launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist 2> /dev/null"
-    sudo sh -c "launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.index.plist 2> /dev/null"
-    sudo sh -c "launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.scan.plist 2> /dev/null"
-    sudo sh -c "launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.spindump.plist 2> /dev/null"
-  else
-    sudo launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
-    sudo launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.index.plist
-    sudo launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.scan.plist
-    sudo launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.spindump.plist
-  fi
+  ###
+  # Completely unloading Spotlight is almost never what you want
+  #
+  # if [[ "$enabled" == "unload" ]]; then
+  #   sudo sh -c "launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist 2> /dev/null"
+  #   sudo sh -c "launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.index.plist 2> /dev/null"
+  #   sudo sh -c "launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.scan.plist 2> /dev/null"
+  #   sudo sh -c "launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.spindump.plist 2> /dev/null"
+  # else
+  #   sudo launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+  #   sudo launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.index.plist
+  #   sudo launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.scan.plist
+  #   sudo launchctl $loaded -w /System/Library/LaunchDaemons/com.apple.metadata.mds.spindump.plist
+  # fi
 }
