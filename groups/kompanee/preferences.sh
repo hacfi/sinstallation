@@ -105,9 +105,9 @@ function set_preferences {
   osx_launchpad_reset
 
   # Locale
-  osx_locale_datetime                                                       'America/Chicago'
-  osx_locale_language                                                       en_US
-  osx_locale_measurement_unit                                               english
+  osx_locale_datetime                                             'America/Chicago'
+  osx_locale_language                                             en_US
+  osx_locale_measurement_unit                                     english
   osx_locale_international_date_format_strings
 
   # Login
