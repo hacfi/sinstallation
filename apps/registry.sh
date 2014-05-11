@@ -78,7 +78,7 @@ function install_iterm {
 }
 
 function install_kaleidoscope {
-  install_compressed_app "http://www.kaleidoscopeapp.com/download" "Kaleidoscope.app"
+  install_compressed_app "http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-2.1.0-134.zip" "Kaleidoscope.app"
 }
 
 function install_keyremap4macbook {
