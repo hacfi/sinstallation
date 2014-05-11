@@ -70,7 +70,7 @@ function install_gpg {
 }
 
 function install_handbrake {
-  install_disk_image_app "http://handbrake.fr/rotation.php?file=HandBrake-0.9.9-MacOSX.6_GUI_x86_64.dmg" "HandBrake.app"
+  install_disk_image_app "http://hivelocity.dl.sourceforge.net/project/handbrake/0.9.9/HandBrake-0.9.9-MacOSX.6_GUI_x86_64.dmg" "HandBrake.app"
 }
 
 function install_iterm {
@@ -186,7 +186,7 @@ function install_todo_pro {
 }
 
 function install_transmission {
-  install_disk_image_app "http://download.transmissionbt.com/files/Transmission-2.82.dmg" "Transmission.app"
+  install_disk_image_app "https://transmission.cachefly.net/Transmission-2.82.dmg" "Transmission.app"
 }
 
 function install_transmit {
