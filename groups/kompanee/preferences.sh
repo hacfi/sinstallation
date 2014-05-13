@@ -186,7 +186,6 @@ function set_preferences {
   osx_screen_capture                                              png "$HOME/Pictures" disabled "screenshot"
 
   # Screen Sharing
-  osx_screen_sharing                                              disabled
   osx_screen_sharing_unencrypted_connection_warnings              enabled
 
   # Screensaver
