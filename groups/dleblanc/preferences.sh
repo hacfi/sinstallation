@@ -33,9 +33,6 @@ function set_preferences {
   osx_finder_allow_quit                                                     enabled
   osx_finder_icon_previews                                                  disabled
 
-  # Firewire
-  osx_firewire                                                              disabled
-
   # iTunes
   osx_itunes_automatic_device_backup_when_syncing                           disabled
   osx_itunes_automatic_sync                                                 disabled

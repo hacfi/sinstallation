@@ -17,9 +17,6 @@ function set_preferences {
   osx_dock_only_show_running_apps                                           enabled
   osx_dock_glassy                                                           disabled
 
-  # Firewire
-  osx_firewire                                                              disabled
-
   # iTunes
   osx_itunes_automatic_device_backup_when_syncing                           disabled
   osx_itunes_automatic_sync                                                 disabled
