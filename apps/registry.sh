@@ -205,6 +205,10 @@ function install_undercover {
   install_package "http://assets.undercoverhq.com/client/6.0/undercover_mac.pkg" "Undercover.app" "Undercover.app.pkg" "/usr/local/uc/bin/uc.app"
 }
 
+function install_utorrent {
+  install_disk_image_app "http://download-new.utorrent.com/endpoint/utmac/os/osx/track/beta/" "uTorrent.app"
+}
+
 function install_vagrant {
   install_disk_image_packaged_app "https://dl.bintray.com/mitchellh/vagrant/vagrant_1.5.4.dmg" "Vagrant" "Vagrant.pkg"
 }
