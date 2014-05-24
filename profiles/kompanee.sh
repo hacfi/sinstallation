@@ -5,6 +5,7 @@ source './profiles/kompanee/directories.sh'
 source './profiles/kompanee/preferences.sh'
 source './profiles/kompanee/login_items.sh'
 source './profiles/kompanee/security.sh'
+source './profiles/kompanee/cleanup.sh'
 
 install_ruby
 install_node
@@ -13,3 +14,4 @@ create_directory_structure
 set_preferences
 add_login_items
 secure
+cleanup
