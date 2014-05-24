@@ -1,7 +1,7 @@
 function install_disk_image_app {
   local url="$1"; shift 1;
   local app_name="$1"; shift 1;
-  local local_file="$HOME/Downloads/${app_name}.dmg"; shift 1;
+  local local_file="$HOME/Downloads/${app_name}.dmg";
 
   if ! [ -a "/Applications/$app_name" ]; then
     download_app "$url" "$local_file"
