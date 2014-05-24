@@ -198,7 +198,6 @@ function set_preferences {
   # Security
   osx_security_system_preference_lock                             enabled
   osx_security_auditing                                           enabled
-  osx_security_firmware_password                                  enabled
   osx_security_destroy_filevault_key_in_standby_mode              enabled
 
   # Sound
