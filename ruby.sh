@@ -47,6 +47,7 @@ function install_ruby {
   $RBENV_ROOT/shims/gem install hash_syntax
   $RBENV_ROOT/shims/gem install gem-browse
   $RBENV_ROOT/shims/gem install pygments.rb
+  $RBENV_ROOT/shims/gem install pygmentize
   $RBENV_ROOT/shims/gem install redcarpet
 
   $RBENV_ROOT/bin/rbenv alias --auto

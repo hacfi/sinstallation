@@ -1,4 +1,3 @@
-* Add [pygmentize](http://rubygems.org/gems/pygmentize)
 * Clear downloads after running
 
 ```
