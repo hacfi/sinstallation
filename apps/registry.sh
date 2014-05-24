@@ -217,6 +217,10 @@ function install_viscosity {
   install_disk_image_app "http://www.thesparklabs.com/downloads/Viscosity.dmg" "Viscosity.app"
 }
 
+function install_vlc {
+  install_disk_image_app "https://get.videolan.org/vlc/2.1.4/macosx/vlc-2.1.4.dmg" "VLC.app"
+}
+
 function install_vmware {
   install_disk_image_app "https://s3.amazonaws.com/boxen-downloads/vmware/VMware-Fusion-6.0.2-1398658-light.dmg" "VMware Fusion.app"
 }
