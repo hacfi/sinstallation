@@ -36,7 +36,6 @@ function install_ruby {
   install_rbenv_plugin "tpope"        "rbenv-sentience"
   install_rbenv_plugin "tpope"        "rbenv-readline"
   install_rbenv_plugin "tpope"        "rbenv-aliases"
-  install_rbenv_plugin "tpope"        "rbenv-communal-gems"
   install_rbenv_plugin "sstephenson"  "rbenv-default-gems"
   install_rbenv_plugin "sstephenson"  "rbenv-gem-rehash"
 
@@ -51,6 +50,5 @@ function install_ruby {
   echo 'pygments.rb' >> $RBENV_ROOT/default_gems
   echo 'redcarpet'   >> $RBENV_ROOT/default_gems
 
-  $RBENV_ROOT/bin/rbenv communize --all
   $RBENV_ROOT/bin/rbenv alias --auto
 }
