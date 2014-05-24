@@ -1,7 +1,7 @@
-source './groups/jfelchner/apps.sh'
-source './groups/jfelchner/preferences.sh'
-source './groups/jfelchner/login_items.sh'
-source './groups/jfelchner/cleanup.sh'
+source './profiles/jfelchner/apps.sh'
+source './profiles/jfelchner/preferences.sh'
+source './profiles/jfelchner/login_items.sh'
+source './profiles/jfelchner/cleanup.sh'
 
 install_apps
 set_preferences

@@ -1,5 +1,5 @@
 source "./homebrew.sh"
-source "./groups.sh"
+source "./profiles.sh"
 source "./preferences.sh"
 source "./sudo.sh"
 

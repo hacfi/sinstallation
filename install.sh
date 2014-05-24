@@ -1,6 +1,6 @@
 source "./bootstrap.sh"
 
-install_group kompanee
-install_group `whoami`
+install_profile kompanee
+install_profile `whoami`
 
 secure
