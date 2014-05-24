@@ -58,7 +58,7 @@ function set_preferences {
   osx_energy_power_nap                                            disabled disabled
 
   # File Vault
-  file_vault                                                      enabled
+  # file_vault                                                      enabled
 
   # Finder
   osx_finder_animations                                           disabled
