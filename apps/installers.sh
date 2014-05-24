@@ -14,6 +14,32 @@ function install_disk_image_app {
   fi
 }
 
+function install_eula_disk_image_app {
+  local url="$1"; shift 1;
+  local app_name="$1"; shift 1;
+  local base_name="$HOME/Downloads/${app_name}";
+  local temp_file="${base_name}.dmg";
+  local non_eula_file="${base_name}.cdr";
+
+  if ! [ -a "/Applications/$app_name" ]; then
+    download_app "$url" "$temp_file"
+
+    remove_eula_from_image "$base_name"
+    mount_image "$non_eula_file"
+
+    install_app "$app_name" "/Volumes/image"
+
+    unmount_image
+  fi
+}
+
+function remove_eula_from_image {
+  local base_name="$1"; shift 1;
+  local image_file="${base_name}.dmg";
+
+  /usr/bin/hdiutil convert -quiet "$image_file" -format UDTO -o "$base_name"
+}
+
 function install_compressed_app {
   local url="$1"; shift 1;
   local app_name="$1"; shift 1;

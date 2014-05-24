@@ -34,7 +34,7 @@ function install_dropbox {
 }
 
 function install_evernote {
-  install_disk_image_app "http://cdn1.evernote.com/mac/release/Evernote_402372.dmg" "Evernote.app"
+  install_eula_disk_image_app "http://cdn1.evernote.com/mac/release/Evernote_402628.dmg" "Evernote.app"
 }
 
 function install_firefox {
@@ -98,7 +98,7 @@ function install_kindle {
 }
 
 function install_launchbar {
-  install_disk_image_app "http://www.obdev.at/downloads/launchbar/LaunchBar-5.6.4.dmg" "LaunchBar.app"
+  install_eula_disk_image_app "http://www.obdev.at/downloads/launchbar/LaunchBar-5.6.4.dmg" "LaunchBar.app"
 }
 
 function install_little_snitch {
