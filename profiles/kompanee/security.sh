@@ -17,7 +17,6 @@ function disable_unnecessary_services {
   sudo sh -c "launchctl unload -w /System/Library/LaunchDaemons/org.postfix.master 2> /dev/null"
 
   sudo sh -c "launchctl unload -w /System/Library/LaunchAgents/com.apple.RemoteUI.plist 2> /dev/null"
-  sudo sh -c "launchctl unload -w /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist 2> /dev/null"
 }
 
 function disable_guid_bits {
