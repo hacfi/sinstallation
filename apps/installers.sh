@@ -118,7 +118,7 @@ function uncompress_and_install {
   mkdir -p "$extraction_dir"
 
   extract "$compressed_file" "$extraction_dir"
-  install_app "$app_name" "$extraction_dir"
+  install_app "$app_name" "$extraction_dir/"
 
   rm -rf "$extraction_dir"
 }
