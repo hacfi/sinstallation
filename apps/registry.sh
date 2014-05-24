@@ -39,10 +39,10 @@ function install_evernote {
 
 function install_firefox {
   if [[ "$1" == "nightly" ]]; then
-    local url="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/firefox-31.0a1.en-US.mac.dmg"
+    local url="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/firefox-32.0a1.en-US.mac.dmg"
     local app_name="FirefoxNightly.app"
   else
-    local url="https://download-installer.cdn.mozilla.net/pub/firefox/releases/28.0/mac/en-US/Firefox%2028.0.dmg"
+    local url="http://ftp.mozilla.org//pub/firefox/releases/29.0.1/mac/en-US/Firefox%2029.0.1.dmg"
     local app_name="Firefox.app"
   fi
 
