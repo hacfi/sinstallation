@@ -40,17 +40,16 @@ function install_ruby {
   install_rbenv_plugin "sstephenson"  "rbenv-default-gems"
   install_rbenv_plugin "sstephenson"  "rbenv-gem-rehash"
 
+  if ! [ -d "/usr/local/var/rbenv/versions/2.1.2" ]; then
+    $RBENV_ROOT/bin/rbenv install 2.1.2
+    $RBENV_ROOT/bin/rbenv global 2.1.2
+  fi
+
   echo 'bundler'      > $RBENV_ROOT/default_gems
   echo 'hash_syntax' >> $RBENV_ROOT/default_gems
   echo 'gem-browse'  >> $RBENV_ROOT/default_gems
   echo 'pygments.rb' >> $RBENV_ROOT/default_gems
   echo 'redcarpet'   >> $RBENV_ROOT/default_gems
-
-  if ! [ -d "/usr/local/var/rbenv/versions/2.1.1" ]; then
-    # Short-term fix for readline 6.3 so that Ruby 2.1.1 will install
-    curl -fsSL https://gist.github.com/mislav/a18b9d7f0dc5b9efc162.txt | rbenv install --patch 2.1.1
-    $RBENV_ROOT/bin/rbenv global 2.1.1
-  fi
 
   $RBENV_ROOT/bin/rbenv communize --all
   $RBENV_ROOT/bin/rbenv alias --auto
