@@ -36,7 +36,6 @@ function install_ruby {
   install_rbenv_plugin "tpope"        "rbenv-sentience"
   install_rbenv_plugin "tpope"        "rbenv-readline"
   install_rbenv_plugin "tpope"        "rbenv-aliases"
-  install_rbenv_plugin "sstephenson"  "rbenv-default-gems"
   install_rbenv_plugin "sstephenson"  "rbenv-gem-rehash"
 
   if ! [ -d "/usr/local/var/rbenv/versions/2.1.2" ]; then
@@ -44,11 +43,11 @@ function install_ruby {
     $RBENV_ROOT/bin/rbenv global 2.1.2
   fi
 
-  echo 'bundler'      > $RBENV_ROOT/default_gems
-  echo 'hash_syntax' >> $RBENV_ROOT/default_gems
-  echo 'gem-browse'  >> $RBENV_ROOT/default_gems
-  echo 'pygments.rb' >> $RBENV_ROOT/default_gems
-  echo 'redcarpet'   >> $RBENV_ROOT/default_gems
+  $RBENV_ROOT/shims/gem install bundler
+  $RBENV_ROOT/shims/gem install hash_syntax
+  $RBENV_ROOT/shims/gem install gem-browse
+  $RBENV_ROOT/shims/gem install pygments.rb
+  $RBENV_ROOT/shims/gem install redcarpet
 
   $RBENV_ROOT/bin/rbenv alias --auto
 }
