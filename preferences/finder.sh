@@ -37,7 +37,7 @@ function osx_finder_file_extensions_warn_on_change {
 
 # Toggle Whether to Show the Finder Path Bar
 function osx_finder_path_bar {
-  local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi; shift 1;
+  local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi;
   local enabled_int; if [[ "$1" == "enabled" ]]; then enabled_int="1"; else enabled_int="0"; fi; shift 1;
 
   defaults write com.apple.finder ShowPathbar -bool $enabled
@@ -135,7 +135,6 @@ function osx_finder_default_location {
   *)
     mode="$1";;
   esac
-  shift 1;
 
   custom_location="$1"; shift 1;
 
