@@ -17,6 +17,10 @@ function install_araxis_merge {
   install_disk_image_app "http://www.araxis.com/download/Merge2013.4415-OSX10.9.dmg" "Araxis Merge.app"
 }
 
+function install_coda {
+  install_compressed_app "http://download.panic.com/coda/Coda%202.0.14.zip" "Coda 2.app"
+}
+
 function install_dash {
   install_mac_app_store_app "Dash.app"
 }
