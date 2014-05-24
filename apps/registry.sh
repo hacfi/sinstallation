@@ -21,6 +21,10 @@ function install_coda {
   install_compressed_app "http://download.panic.com/coda/Coda%202.0.14.zip" "Coda 2.app"
 }
 
+function install_codekit {
+  install_compressed_app "http://incident57.com/codekit/files/codekit-16921.zip" "CodeKit.app"
+}
+
 function install_dash {
   install_mac_app_store_app "Dash.app"
 }
