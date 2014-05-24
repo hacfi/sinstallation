@@ -30,7 +30,6 @@ function install_apps {
   install_gpg
   install_iterm
   install_kaleidoscope
-  install_keyremap4macbook
   install_little_snitch
   install_macvim
   install_one_password
