@@ -106,7 +106,8 @@ function install_mac_app_store_app {
 
   if ! [ -a "/Applications/$app_name" ]; then
     echo "$app_name is in the Mac App Store"
-    read -p "Press Return to continue..."
+    echo "Press Return to continue..."
+    read
   fi
 }
 
