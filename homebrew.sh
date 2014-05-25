@@ -9,7 +9,7 @@ function install_homebrew {
 function install_or_upgrade_package {
   local package_name=$1; shift 1;
 
-  if [ -z "$(/usr/local/bin/brew list $package_name)" ]; then
+  if [ -z "$(/usr/local/bin/brew list -1 | grep $package_name)" ]; then
     brew install $package_name
   else
     brew upgrade $package_name 2> /dev/null
