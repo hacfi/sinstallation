@@ -61,8 +61,8 @@ function osx_dock_clear {
   rm -f $HOME/Library/Application\ Support/Dock/*.db 2> /dev/null && killall Dock
 
   for (( i = 0; i < 5; i++ )); do
-    echo -n "########" ; sleep 1
-    echo -n "########" ; sleep 1
+    echo "."; sleep 1
+    echo "."; sleep 1
   done
 
   echo ""
