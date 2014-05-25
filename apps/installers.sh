@@ -44,7 +44,7 @@ function install_compressed_app {
   local url="$1"; shift 1;
   local app_name="$1"; shift 1;
   local compressed_filename="$(basename $url)"
-  local local_file="$HOME/Downloads/$compressed_filename"; shift 1;
+  local local_file="$HOME/Downloads/$compressed_filename"
 
   if ! [ -a "/Applications/$app_name" ]; then
     download_app "$url" "$local_file"
@@ -114,21 +114,21 @@ function install_mac_app_store_app {
 function uncompress_and_install {
   local app_name="$1"; shift 1;
   local compressed_file="$1"; shift 1;
-  local extraction_dir="$HOME/Downloads/${app_name}"
+  local extraction_dir="$HOME/Downloads/${app_name}.unpack"
 
   mkdir -p "$extraction_dir"
 
   extract "$compressed_file" "$extraction_dir"
-  install_app "$app_name" "$extraction_dir/"
+  install_app "$app_name" "$extraction_dir"
 
-  rm -rf "$extraction_dir"
+  sudo rm -rf "$extraction_dir"
 }
 
 function install_app {
   local app_name="$1"; shift 1;
   local source_app_dir="$1"; shift 1;
 
-  rm -rf "/Applications/$app_name"
+  sudo rm -rf "/Applications/$app_name"
   sudo find "$source_app_dir" -name "$app_name" -exec cp -R {} "/Applications/" \;
 }
 
