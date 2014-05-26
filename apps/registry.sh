@@ -214,7 +214,7 @@ function install_undercover {
 }
 
 function install_utorrent {
-  install_disk_image_app "http://download-new.utorrent.com/endpoint/utmac/os/osx/track/beta/" "uTorrent.app"
+  install_eula_disk_image_app "http://download-new.utorrent.com/endpoint/utmac/os/osx/track/beta/" "uTorrent.app"
 }
 
 function install_vagrant {
