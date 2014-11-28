@@ -1,5 +1,5 @@
 ################################################################################
-#                                   System        
+#                                   System
 ################################################################################
 
 # Toggle Whether Software Updates are Downloaded in the Background when Available
@@ -132,7 +132,7 @@ function osx_system_recovery_message {
   #
   # The CS cache can be updated directly by touching $eficachedir, if it exists.
   # Otherwise you will need to touch $kextdir to generate it.
-  
+
   # Refresh system kext cache
   sudo mkdir -p $kextdir 2> /dev/null
 

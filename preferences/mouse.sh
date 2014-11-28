@@ -1,5 +1,5 @@
 ################################################################################
-#                              Trackpad (and Mice)  
+#                              Trackpad (and Mice)
 ################################################################################
 
 # --------------------------------------------------------------------------------
@@ -164,7 +164,7 @@ function osx_trackpad_two_finger_horizontal_swipe {
   else
     defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
   fi
-  
+
   # External Mouse
   defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseTwoFingerHorizSwipeGesture -int $mode
 }
@@ -263,7 +263,7 @@ function osx_trackpad_three_finger_vertical_swipe {
   # Internal Trackpad
   sudo defaults write NSGlobalDomain com.apple.trackpad.threeFingerVertSwipeGesture -int $mode
   defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int $mode
-  
+
   # External Trackpad
   defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int $mode
 }
@@ -298,7 +298,7 @@ function osx_trackpad_four_finger_vertical_swipe {
   # Internal Trackpad
   sudo defaults write NSGlobalDomain com.apple.trackpad.fourFingerVertSwipeGesture -int $mode
   defaults write com.apple.AppleMultitouchTrackpad TrackpadFourFingerVertSwipeGesture -int $mode
-  
+
   # External Trackpad
   defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerVertSwipeGesture -int $mode
 }
@@ -321,7 +321,7 @@ function osx_trackpad_four_finger_vertical_swipe {
 
 function osx_trackpad_three_finger_drag {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi
-  
+
   # Internal Trackpad
   sudo defaults write NSGlobalDomain com.apple.trackpad.threeFingerDragGesture -bool $enabled
   defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool $enabled
@@ -350,7 +350,7 @@ function osx_trackpad_three_finger_drag {
 function osx_trackpad_two_finger_pinch {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi
 
-  # Internal Trackpad 
+  # Internal Trackpad
   sudo defaults write NSGlobalDomain com.apple.trackpad.pinchGesture -bool $enabled
   defaults write com.apple.AppleMultitouchTrackpad TrackpadPinch -bool $enabled
 
@@ -433,11 +433,11 @@ function osx_trackpad_swipe_from_right_edge {
 function osx_trackpad_rotation {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi
 
-  # Internal Trackpad 
+  # Internal Trackpad
   sudo defaults write NSGlobalDomain com.apple.trackpad.rotateGesture -bool $enabled
   defaults write com.apple.AppleMultitouchTrackpad TrackpadRotate -bool $enabled
 
-  # External Trackpad 
+  # External Trackpad
   defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRotate -bool $enabled
 }
 
@@ -449,10 +449,10 @@ function osx_trackpad_rotation {
 function osx_trackpad_tap_to_drag {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="1"; else enabled="0"; fi
 
-  # Internal Trackpad 
+  # Internal Trackpad
   defaults write com.apple.AppleMultitouchTrackpad Dragging -int $enabled
 
-  # External Trackpad 
+  # External Trackpad
   defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -int $enabled
 }
 
