@@ -252,7 +252,6 @@ function set_preferences {
 
   # Windows
   osx_windows_miniaturize_on_double_click                         enabled
-  osx_windows_animations                                          enabled 0.01
 
   osx_preferences_apply
 }
