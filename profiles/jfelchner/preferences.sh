@@ -28,6 +28,9 @@ function set_preferences {
   osx_drives_sudden_motion_sensor                                           disabled
   osx_drives_remote_sharing                                                 disabled
 
+  # Energy
+  osx_energy_app_nap                                                        disabled
+
   # Finder
   osx_finder_allow_quit                                                     enabled
   osx_finder_icon_previews                                                  disabled

@@ -52,3 +52,9 @@ function osx_energy_power_button_sleeps_system {
 
   defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool $enabled
 }
+
+function osx_energy_app_nap {
+  local enabled; if [[ "$1" == "enabled" ]]; then enabled="false"; else enabled="true"; fi; shift 1;
+
+  defaults write NSGlobalDomain NSAppSleepDisabled -bool $enabled
+}
