@@ -34,6 +34,8 @@ function osx_spotlight {
 
   sudo killall mds > /dev/null 2>&1
 
+  sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+
   if [[ "$enabled" == "off" || "$enabled" == "unload" ]]; then
     sudo sh -c "mdutil -a -E -i $enabled &> /dev/null"
     sudo sh -c "mdutil -a -d -E &> /dev/null"
