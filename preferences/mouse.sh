@@ -391,7 +391,38 @@ function osx_trackpad_four_finger_pinch {
   sudo defaults write NSGlobalDomain com.apple.trackpad.fiveFingerPinchSwipeGesture -int $mode
   defaults write com.apple.AppleMultitouchTrackpad TrackpadFourFingerPinchGesture -int $mode
   defaults write com.apple.AppleMultitouchTrackpad TrackpadFiveFingerPinchGesture -int $mode
-  
+
+  # External Trackpad
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerPinchGesture -int $mode
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFiveFingerPinchGesture -int $mode
+}
+
+function osx_trackpad_four_finger_pull {
+  local mode;
+
+  case "$1" in
+  desktop)
+    mode="2";;
+  disabled)
+    mode="0";;
+  *)
+    mode="$1";;
+  esac
+
+  defaults write com.apple.dock showDesktopGestureEnable -int 0
+
+  if [[ "$1" == "desktop" ]]; then
+    defaults write com.apple.dock showDesktopGestureEnable -int 1
+  else
+    defaults write com.apple.dock showDesktopGestureEnable -int 0
+  fi
+
+  # Internal Trackpad
+  sudo defaults write NSGlobalDomain com.apple.trackpad.fourFingerPinchSwipeGesture -int $mode
+  sudo defaults write NSGlobalDomain com.apple.trackpad.fiveFingerPinchSwipeGesture -int $mode
+  defaults write com.apple.AppleMultitouchTrackpad TrackpadFourFingerPinchGesture -int $mode
+  defaults write com.apple.AppleMultitouchTrackpad TrackpadFiveFingerPinchGesture -int $mode
+
   # External Trackpad
   defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerPinchGesture -int $mode
   defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFiveFingerPinchGesture -int $mode
@@ -404,6 +435,11 @@ function osx_trackpad_four_finger_pinch {
 # Same as Four Finger Pinch
 function osx_trackpad_five_finger_pinch {
   osx_trackpad_four_finger_pinch "$@"
+}
+
+# Same as Four Finger Pull
+function osx_trackpad_five_finger_pull {
+  osx_trackpad_four_finger_pull "$@"
 }
 
 # --------------------------------------------------------------------------------
