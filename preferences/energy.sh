@@ -46,3 +46,9 @@ function osx_energy_power_nap {
   sudo pmset -b darkwakes ${on_battery}
   sudo pmset -c darkwakes ${when_plugged_in}
 }
+
+function osx_energy_power_button_sleeps_system {
+  local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi; shift 1;
+
+  defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool $enabled
+}

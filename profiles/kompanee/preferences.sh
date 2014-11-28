@@ -58,6 +58,7 @@ function set_preferences {
   osx_energy_display_sleep                                         5    15
   osx_energy_sleep                                                15     0
   osx_energy_power_nap                                            disabled disabled
+  osx_energy_power_button_sleeps_system                           disabled
 
   # File Vault
   # file_vault                                                      enabled
