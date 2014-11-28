@@ -35,6 +35,8 @@ function osx_locale_24_hour_clock {
   defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "2" "${enabled}:mm:ss"
   defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "3" "${enabled}:mm:ss z"
   defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "4" "${enabled}:mm:ss zzzz"
+
+  osx_menu_bar_date "E d  ${enabled}:mm"
 }
 
 # Set short date to international format.

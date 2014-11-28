@@ -128,7 +128,6 @@ function set_preferences {
   osx_login_show_secure_users                                     disabled
 
   # Menu Bar
-  osx_menu_bar_date                                               "E d  H:mm"
   osx_menu_bar_invert_in_full_screen_mode                         enabled
 
   for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do

@@ -24,9 +24,6 @@ function set_preferences {
   osx_itunes_automatic_sync                                                 disabled
   osx_itunes_media_key_access                                               disabled
 
-  # Locale
-  osx_locale_24_hour_clock                                                  enabled
-
   # Spotlight
   osx_spotlight                                                             disabled
 
