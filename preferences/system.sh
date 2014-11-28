@@ -103,8 +103,8 @@ function osx_system_host_name {
   sudo sh -c "scutil --set ComputerName ${value}"
   sudo sh -c "scutil --set HostName ${value}"
   sudo sh -c "scutil --set LocalHostName ${value}"
-  sudo sh -c "systemsetup -setcomputername ${value} &> /dev/null"
-  sudo sh -c "systemsetup -setlocalsubnetname ${value} &> /dev/null"
+  sudo sh -c "/usr/sbin/systemsetup -setcomputername ${value} &> /dev/null"
+  sudo sh -c "/usr/sbin/systemsetup -setlocalsubnetname ${value} &> /dev/null"
 
   sudo sh -c "defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName $value"
   sudo sh -c "defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server ServerDecription $value"
@@ -146,7 +146,7 @@ function osx_system_recovery_message {
 function osx_system_restart_on_hang {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="on"; else enabled="off"; fi; shift 1;
 
-  sudo systemsetup -setrestartfreeze ${enabled}
+  sudo /usr/sbin/systemsetup -setrestartfreeze ${enabled}
 }
 
 # Sets the number of recent items for various things like servers, documents and applications
