@@ -1,20 +1,32 @@
-source './apps/registry.sh'
+source './apps/installers.sh'
 
 function install_apps {
   # install_adobe_creative_suite
-  install_airserver
-  install_handbrake
-  install_kindle
-  install_launchbar
-  install_macpar
-  install_mplayerx
-  install_name_mangler
-  install_pocket
-  install_rdio
-  install_reeder
-  install_scansnap
-  install_shush
-  install_steam
-  install_transmission
-  install_tweetbot
+  install_or_upgrade_app    'airserver'
+  install_or_upgrade_app    'araxis-merge'
+  install_or_upgrade_app    'comicbooklover'
+  install_or_upgrade_app    'comicbookloversync'
+  install_or_upgrade_app    'handbrake'
+  install_mac_app_store_app 'Kindle.app'
+  install_or_upgrade_app    'launchbar'
+  install_or_upgrade_app    'macpar-deluxe'
+  install_or_upgrade_app    'mplayerx'
+  install_or_upgrade_app    'name-mangler'
+  install_or_upgrade_app    'plex-home-theater'
+  install_mac_app_store_app 'Pocket.app'
+  install_mac_app_store_app 'Quicken.app'
+  install_or_upgrade_app    'quicklook-csv'
+  install_or_upgrade_app    'quicklook-json'
+  install_or_upgrade_app    'rdio'
+  install_mac_app_store_app 'Reeder.app'
+  install_or_upgrade_app    'scansnap-manager'
+  install_or_upgrade_app    'screenflow'
+  install_mac_app_store_app 'Shush.app'
+  install_or_upgrade_app    'sixtyforce'
+  install_or_upgrade_app    'snes9x'
+  install_or_upgrade_app    'steam'
+  install_mac_app_store_app 'Textual.app'
+  install_mac_app_store_app 'Tweetbot.app'
+  install_or_upgrade_app    'utorrent-beta'
+  install_or_upgrade_app    'vitamin-r'
 }

@@ -1,5 +1,5 @@
-source './apps/registry.sh'
+source './apps/installers'
 
 function install_apps {
-  install_launchbar
+  install_or_upgrade_app 'launchbar'
 }
