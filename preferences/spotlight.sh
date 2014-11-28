@@ -32,6 +32,8 @@ function osx_spotlight {
     '{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
     '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 
+  sudo killall mds > /dev/null 2>&1
+
   if [[ "$enabled" == "off" || "$enabled" == "unload" ]]; then
     sudo sh -c "mdutil -a -E -i $enabled &> /dev/null"
     sudo sh -c "mdutil -a -d -E &> /dev/null"
