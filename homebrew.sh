@@ -10,7 +10,7 @@ function install_or_upgrade_package {
 
 function install_homebrew {
   if ! [ -x /usr/local/bin/brew ]; then
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 
   /usr/local/bin/brew update
