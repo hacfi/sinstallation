@@ -14,7 +14,6 @@ function set_preferences {
   osx_dock_itunes_notifications                                             disabled
   osx_dock_only_show_running_apps                                           enabled
   osx_dock_orientation                                                      right middle
-  osx_dock_glassy                                                           disabled
 
   # Finder
   osx_finder_allow_quit                                                     enabled

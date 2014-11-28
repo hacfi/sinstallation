@@ -15,7 +15,6 @@ function set_preferences {
   # Dock
   osx_dock_itunes_notifications                                             disabled
   osx_dock_only_show_running_apps                                           enabled
-  osx_dock_glassy                                                           disabled
 
   # iTunes
   osx_itunes_automatic_device_backup_when_syncing                           disabled

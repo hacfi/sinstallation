@@ -122,14 +122,6 @@ function osx_dock_orientation {
   defaults write com.apple.dock pinning -string $pinning
 }
 
-# Set the Style of the Dock
-function osx_dock_glassy {
-  local enabled; if [[ "$1" == "enabled" ]]; then enabled="false"; else enabled="true"; fi; shift 1;
-
-  defaults write com.apple.dock no-glass -bool $enabled
-  defaults write com.apple.dock hide-mirror -bool $enabled
-}
-
 # Toggle the delay for showing the Dock in full screen
 function osx_dock_full_screen_delay {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi; shift 1;

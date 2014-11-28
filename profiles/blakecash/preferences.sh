@@ -12,7 +12,6 @@ function set_preferences {
   # Dock
   osx_dock_itunes_notifications                                             disabled
   osx_dock_orientation                                                      right middle
-  osx_dock_glassy                                                           disabled
 
   # Drives
   osx_drives_sudden_motion_sensor                                           disabled
