@@ -171,3 +171,9 @@ function osx_appearance_transparency {
 
   defaults write com.apple.universalaccess reduceTransparency -bool $enabled
 }
+
+function osx_appearance_dark_mode {
+  local mode; if [[ "$1" == "enabled" ]]; then enabled="Dark"; else enabled="Light"; fi; shift 1;
+
+  defaults write NSGlobalDomain AppleInterfaceTheme $mode
+}

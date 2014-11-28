@@ -19,6 +19,7 @@ function set_preferences {
   osx_appearance_font_smoothing_threshold                         8
   osx_appearance_sidebar_icons                                    small
   osx_appearance_transparency                                     disabled
+  osx_appearance_dark_mode                                        enabled
 
   # Debugging
   osx_debug_mode                                                  enabled
