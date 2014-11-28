@@ -24,9 +24,6 @@ function set_preferences {
   # Keyboard
   osx_keyboard_default_to_alternate_function_keys                           disabled
 
-  # Locale
-  osx_locale_datetime                                                       'America/Chicago'
-
   # Security
   osx_system_recovery_message                                               enabled "If you find this Mac, please call (512) 739-9268. There is a reward."
 

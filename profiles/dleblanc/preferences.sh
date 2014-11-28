@@ -38,7 +38,6 @@ function set_preferences {
   osx_itunes_media_key_access                                               disabled
 
   # Locale
-  osx_locale_datetime                                                       'America/Chicago'
   osx_locale_24_hour_clock                                                  enabled
 
   # Menu Bar
