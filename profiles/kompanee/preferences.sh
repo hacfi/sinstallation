@@ -21,6 +21,10 @@ function set_preferences {
   osx_appearance_transparency                                     disabled
   osx_appearance_dark_mode                                        enabled
 
+  # Chrome
+  chrome_allow_swipe_to_navigate                                  disabled
+  chrome_use_system_print_dialog                                  enabled
+
   # Debugging
   osx_debug_mode                                                  enabled
 
