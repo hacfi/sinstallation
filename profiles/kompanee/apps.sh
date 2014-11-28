@@ -56,6 +56,7 @@ function install_apps {
   install_or_upgrade_app    'google-hangouts'
   install_or_upgrade_app    'google-chrome-canary'
   install_or_upgrade_app    'gpgtools'
+  install_or_upgrade_app    'icefloor'
   install_or_upgrade_app    'iterm2-nightly'
   install_or_upgrade_app    'kaleidoscope'
   install_or_upgrade_app    'little-snitch'
