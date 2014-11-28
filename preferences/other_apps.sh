@@ -168,7 +168,7 @@ defaults write com.google.Chrome HideWebStoreIcon -bool YES
 defaults write com.google.Chrome SigninAllowed -bool NO
 
 # List of pinned apps to show in the launcher.
-defaults write com.google.Chrome PinnedLauncherApps -array
+defaults write com.google.Chrome PinnedLauncherApps -array ""
 
 # Do not import bookmarks from default browser on first run.
 defaults write com.google.Chrome ImportBookmarks -bool NO
