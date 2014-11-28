@@ -33,22 +33,28 @@ function install_ruby {
   ln -sf $RBENV_ROOT/bin/rbenv /usr/local/bin/
 
   install_rbenv_plugin "sstephenson"  "ruby-build"
-  install_rbenv_plugin "tpope"        "rbenv-sentience"
   install_rbenv_plugin "tpope"        "rbenv-readline"
   install_rbenv_plugin "tpope"        "rbenv-aliases"
-  install_rbenv_plugin "sstephenson"  "rbenv-gem-rehash"
 
-  if ! [ -d "/usr/local/var/rbenv/versions/2.1.2" ]; then
-    $RBENV_ROOT/bin/rbenv install 2.1.2
-    $RBENV_ROOT/bin/rbenv global 2.1.2
+  if ! [ -d "/usr/local/var/rbenv/versions/2.1.4" ]; then
+    $RBENV_ROOT/bin/rbenv install 2.1.4
+    $RBENV_ROOT/bin/rbenv global 2.1.4
   fi
 
+  $RBENV_ROOT/shims/gem install awesome_print
   $RBENV_ROOT/shims/gem install bundler
-  $RBENV_ROOT/shims/gem install hash_syntax
   $RBENV_ROOT/shims/gem install gem-browse
-  $RBENV_ROOT/shims/gem install pygments.rb
+  $RBENV_ROOT/shims/gem install hash_syntax
+  $RBENV_ROOT/shims/gem install heroku
+  $RBENV_ROOT/shims/gem install overcommit
   $RBENV_ROOT/shims/gem install pygmentize
+  $RBENV_ROOT/shims/gem install pygments.rb
   $RBENV_ROOT/shims/gem install redcarpet
+  $RBENV_ROOT/shims/gem install rubocop
+  $RBENV_ROOT/shims/gem install rubygems-update
+  $RBENV_ROOT/shims/gem install scss-lint
+  $RBENV_ROOT/shims/gem install travis
+  $RBENV_ROOT/shims/gem install travis-lint
 
   $RBENV_ROOT/bin/rbenv alias --auto
 }

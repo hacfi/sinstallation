@@ -34,8 +34,12 @@ function install_node {
 
   install_nodenv_plugin "OiNutter" "node-build"
 
-  if ! [ -d "/usr/local/var/nodenv/versions/0.10.26" ]; then
-    nodenv install 0.10.26
-    nodenv global 0.10.26
+  if ! [ -d "/usr/local/var/nodenv/versions/0.10.33" ]; then
+    nodenv install 0.10.33
+    nodenv global 0.10.33
   fi
+
+  $NODENV_ROOT/shims/npm install -g ember-cli
+  $NODENV_ROOT/shims/npm install -g jsonlint
+  $NODENV_ROOT/shims/npm install -g phantomjs
 }
