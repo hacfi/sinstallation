@@ -15,10 +15,3 @@ function osx_menu_bar_date {
 
   defaults write com.apple.menuextra.clock DateFormat -string "$format"
 }
-
-# Switch to dark menu bar in full screen mode
-function osx_menu_bar_invert_in_full_screen_mode {
-  local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi
-
-  defaults write NSGlobalDomain NSFullScreenDarkMenu -bool $enabled
-}
