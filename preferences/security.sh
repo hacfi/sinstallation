@@ -21,3 +21,12 @@ function osx_security_destroy_filevault_key_in_standby_mode {
 
   sudo pmset -a destroyfvkeyonstandby $enabled
 }
+
+function osx_security_send_safari_search_suggestions_to_apple {
+  local enabled;     if [[ "$1" == "enabled" ]]; then enabled="true";      else enabled="false";    fi;
+  local enabled_inv; if [[ "$1" == "enabled" ]]; then enabled_inv="false"; else enabled_inv="true"; fi;
+  shift 1;
+
+  defaults write com.apple.Safari UniversalSearchEnabled    -bool $enabled
+  defaults write com.apple.Safari SuppressSearchSuggestions -bool $enabled_inv
+}

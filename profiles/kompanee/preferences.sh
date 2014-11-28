@@ -199,6 +199,7 @@ function set_preferences {
   osx_security_system_preference_lock                             enabled
   osx_security_auditing                                           enabled
   osx_security_destroy_filevault_key_in_standby_mode              enabled
+  osx_security_send_safari_search_suggestions_to_apple            disabled
 
   # Sound
   osx_sound_startup_chime                                         disabled
