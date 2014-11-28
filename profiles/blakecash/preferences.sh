@@ -22,6 +22,9 @@ function set_preferences {
   osx_itunes_automatic_sync                                                 disabled
   osx_itunes_media_key_access                                               disabled
 
+  # Security
+  osx_system_recovery_message                                               enabled "If you find this Mac, please call 512-589-5111. There is a reward."
+
   # System
   osx_system_host_name                                                      cashmachine
 

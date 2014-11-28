@@ -24,6 +24,9 @@ function set_preferences {
   osx_itunes_automatic_sync                                                 disabled
   osx_itunes_media_key_access                                               disabled
 
+  # Security
+  osx_system_recovery_message                                               enabled "If you find this Mac, please call 615-631-0733. There is a reward."
+
   # Spotlight
   osx_spotlight                                                             disabled
 
