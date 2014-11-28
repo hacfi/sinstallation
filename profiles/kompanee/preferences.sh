@@ -18,6 +18,7 @@ function set_preferences {
   osx_appearance_font_rendering_mode                              2
   osx_appearance_font_smoothing_threshold                         8
   osx_appearance_sidebar_icons                                    small
+  osx_appearance_transparency                                     disabled
 
   # Debugging
   osx_debug_mode                                                  enabled
@@ -121,7 +122,6 @@ function set_preferences {
   osx_login_show_secure_users                                     disabled
 
   # Menu Bar
-  osx_menu_bar_transparency                                       enabled
   osx_menu_bar_date                                               "E d  H:mm"
   osx_menu_bar_invert_in_full_screen_mode                         enabled
 

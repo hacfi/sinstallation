@@ -165,3 +165,9 @@ function osx_appearance_sidebar_icons {
   defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int $size
   defaults write NSGlobalDomain NSNavPanelIconViewIconSizeForOpenMode -int $size
 }
+
+function osx_appearance_transparency {
+  local enabled; if [[ "$1" == "enabled" ]]; then enabled="false"; else enabled="true"; fi; shift 1;
+
+  defaults write com.apple.universalaccess reduceTransparency -bool $enabled
+}

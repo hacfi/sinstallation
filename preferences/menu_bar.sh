@@ -9,13 +9,6 @@ function osx_menu_bar_airplay {
   defaults write com.apple.airplay showInMenuBarIfPresent -bool $enabled
 }
 
-# Toggle Menu Bar Transparency
-function osx_menu_bar_transparency {
-  local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi
-
-  defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool $enabled
-}
-
 # Sets the Format of the Date in the Menu Bar
 function osx_menu_bar_date {
   local format="$1"; shift 1;
