@@ -15,6 +15,7 @@ function osx_dialogs_auto_expanding_save_dialog {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi
 
   defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode  -bool $enabled
+  defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool $enabled
 }
 
 # TODO: Let the user pass in readable values instead of 1, 2, 3, etc.
