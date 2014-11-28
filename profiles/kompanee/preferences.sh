@@ -175,6 +175,9 @@ function set_preferences {
   osx_network_faxes                                               disabled
   osx_network_stop_bonjour_advertisements
 
+  # Notification Center
+  osx_notification_center_banner_delay                            2
+
   # Printing
   osx_printing_quit_when_finished                                 enabled
 
