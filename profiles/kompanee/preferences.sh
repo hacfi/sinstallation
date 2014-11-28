@@ -161,8 +161,9 @@ function set_preferences {
   osx_trackpad_four_finger_vertical_swipe                         expose
   osx_trackpad_three_finger_drag                                  disabled
   osx_trackpad_two_finger_pinch                                   enabled
-  osx_trackpad_four_finger_pinch                                  desktop
+  osx_trackpad_four_finger_pinch                                  disabled
   osx_trackpad_five_finger_pinch                                  desktop
+  osx_trackpad_four_finger_pull                                   desktop
   osx_trackpad_swipe_from_right_edge                              notification_center
   osx_trackpad_rotation                                           enabled
   osx_trackpad_tap_to_drag                                        disabled
