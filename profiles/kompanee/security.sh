@@ -3,7 +3,7 @@
 ################################################################################
 
 function secure {
-  disable_unnecessary_services
+  # disable_unnecessary_services
   disable_guid_bits
   fix_applications_permissions
   fix_home_directory_permissions
