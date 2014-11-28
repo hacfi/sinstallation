@@ -374,8 +374,6 @@ function osx_trackpad_four_finger_pinch {
   case "$1" in
   launchpad)
     mode="2";;
-  desktop)
-    mode="2";;
   disabled)
     mode="0";;
   *)
@@ -383,11 +381,9 @@ function osx_trackpad_four_finger_pinch {
   esac
 
   if [[ "$1" == "launchpad" ]]; then
-    defaults write com.apple.dock showLaunchpadGestureEnabled -bool true
-  elif [[ "$1" == "desktop" ]]; then
-    defaults write com.apple.dock showLaunchpadGestureEnabled -bool true
+    defaults write com.apple.dock showLaunchpadGestureEnabled -int 1
   else
-    defaults write com.apple.dock showLaunchpadGestureEnabled -bool false
+    defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
   fi
 
   # Internal Trackpad
