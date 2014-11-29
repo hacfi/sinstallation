@@ -163,4 +163,13 @@ function osx_system_max_number_of_recent_items {
   defaults write com.apple.recentitems Servers.MaxAmount -int $max
   defaults write com.apple.recentitems Documents.MaxAmount -int $max
   defaults write com.apple.recentitems Applications.MaxAmount -int $max
+
+  $path_to_plistbuddy -c "Delete :RecentApplications:MaxAmount" /Users/$(whoami)/Library/Preferences/com.apple.recentitems.plist 2> /dev/null
+  $path_to_plistbuddy -c "Add :RecentApplications:MaxAmount integer $max" /Users/$(whoami)/Library/Preferences/com.apple.recentitems.plist 2> /dev/null
+
+  $path_to_plistbuddy -c "Delete :RecentDocuments:MaxAmount" /Users/$(whoami)/Library/Preferences/com.apple.recentitems.plist 2> /dev/null
+  $path_to_plistbuddy -c "Add :RecentDocuments:MaxAmount integer $max" /Users/$(whoami)/Library/Preferences/com.apple.recentitems.plist 2> /dev/null
+
+  $path_to_plistbuddy -c "Delete :RecentServers:MaxAmount" /Users/$(whoami)/Library/Preferences/com.apple.recentitems.plist 2> /dev/null
+  $path_to_plistbuddy -c "Add :RecentServers:MaxAmount integer $max" /Users/$(whoami)/Library/Preferences/com.apple.recentitems.plist 2> /dev/null
 }
