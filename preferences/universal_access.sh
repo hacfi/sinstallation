@@ -14,6 +14,7 @@ function osx_universal_access_scrollwheel_zoom {
 function osx_universal_access_flash_screen {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="1"; else enabled="0"; fi
 
+  defaults write com.apple.systemsound com.apple.sound.beep.flash -int $enabled
   defaults write com.apple.universalaccess flashScreen $enabled
 }
 
