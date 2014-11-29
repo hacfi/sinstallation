@@ -56,6 +56,8 @@ function set_preferences {
   # System
   osx_system_host_name                                                      poseidon
   osx_system_document_versioning                                            disabled
+  osx_system_update_automatic_downloads                                     disabled
+  osx_system_update_automatic_installation                                  disabled
 
   # Tooltips
   osx_tooltips_delay                                                        250
