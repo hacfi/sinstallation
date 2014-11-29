@@ -28,7 +28,7 @@ function osx_locale_measurement_unit {
 }
 
 function osx_locale_24_hour_clock {
-  local enabled; if [[ "$1" == "enabled" ]]; then enabled="H"; else enabled="h"; fi
+  local enabled;      if [[ "$1" == "enabled" ]]; then enabled="H"; else enabled="h"; fi
   local enabled_bool; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi
 
   defaults delete NSGlobalDomain AppleICUTimeFormatStrings

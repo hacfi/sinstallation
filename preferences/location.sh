@@ -1,11 +1,11 @@
 ################################################################################
-#                                  Location     
+#                                  Location
 ################################################################################
 
 function osx_location {
-  local loaded; if [[ "$1" == "enabled" ]]; then loaded="load"; else loaded="unload"; fi
   local enabled;     if [[ "$1" == "enabled" ]]; then enabled="true";  else enabled="false"; fi
   local enabled_neg; if [[ "$1" == "enabled" ]]; then enabled="false"; else enabled="true"; fi
+  local loaded;      if [[ "$1" == "enabled" ]]; then loaded="load";   else loaded="unload"; fi
 
   defaults write com.apple.MCX DisableLocationServices -bool $enabled_neg
   defaults -currentHost write com.apple.locationd LocationServicesEnabled -bool $enabled
