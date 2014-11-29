@@ -1,5 +1,5 @@
 ################################################################################
-#                                   Login  
+#                                   Login
 ################################################################################
 
 # Toggles Whether to Automatically Login a User
@@ -66,7 +66,7 @@ function osx_login_style {
     mode="false";;
   esac
 
-  defaults write com.apple.loginwindow SHOWFULLNAME -bool $mode
+  sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWFULLNAME -bool $mode
 }
 
 # Toggle Whether to Display Users with UID Less Than 500
