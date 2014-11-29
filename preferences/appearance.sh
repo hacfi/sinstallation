@@ -177,6 +177,6 @@ function osx_appearance_dark_mode {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi;
   shift 1;
 
-  defaults write NSGlobalDomain AppleInterfaceTheme $mode
+  defaults write NSGlobalDomain AppleInterfaceStyle $mode
   defaults write NSGlobalDomain NSFullScreenDarkMenu -bool $enabled
 }
