@@ -64,7 +64,6 @@ function install_apps {
   install_or_upgrade_app    'navicat-premium'
   install_or_upgrade_app    'onepassword-beta'
   # install_pagekite
-  install_or_upgrade_app    'screenflow'
   install_or_upgrade_app    'screenhero'
   install_or_upgrade_app    'sizeup'
   install_or_upgrade_app    'slack'
