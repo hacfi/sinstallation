@@ -32,7 +32,7 @@ function install_mac_app_store_app {
 }
 
 function install_or_upgrade_app {
-  local app_name; app_name=shift 1
+  local app_name="$1"; shift 1;
 
   if $(brew cask list | grep $app_name); then
     brew upgrade $app_name
