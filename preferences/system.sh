@@ -2,20 +2,6 @@
 #                                   System
 ################################################################################
 
-# Toggle Whether Software Updates are Downloaded in the Background when Available
-function osx_system_update_automatic_downloads {
-  local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi; shift 1;
-
-  sudo defaults write AutomaticDownload /Library/Preferences/com.apple.SoftwareUpdate -bool $enabled
-}
-
-# Toggle Whether Software Update Prefers the Apple CDN
-function osx_system_update_local_cdn {
-  local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi; shift 1;
-
-  sudo defaults write com.apple.SoftwareUpdate /Library/Preferences/com.apple.SoftwareUpdate -bool $enabled
-}
-
 # Toggle the Downloaded App Quarantine
 function osx_system_app_quarantine {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi; shift 1;
@@ -91,6 +77,29 @@ function osx_system_update_schedule {
   esac
 
   sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate ScheduleFrequency -int $interval
+}
+
+# Toggle Whether Software Updates are Downloaded in the Background when Available
+function osx_system_update_automatic_downloads {
+  local enabled; if [[ "$1" == "enabled" ]]; then enabled="1"; else enabled="0"; fi; shift 1;
+
+  sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -int $enabled
+}
+
+# Toggle Whether Software Update Prefers the Apple CDN
+function osx_system_update_local_cdn {
+  local enabled; if [[ "$1" == "enabled" ]]; then enabled="0"; else enabled="1"; fi; shift 1;
+
+  sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate SkipLocalCDN -int $enabled
+}
+
+function osx_system_update_automatic_installation {
+  local enabled; if [[ "$1" == "enabled" ]]; then enabled="1"; else enabled="0"; fi; shift 1;
+
+  sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate ConfigDataInstall -int $enabled
+  sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate CriticalUpdateInstall -int $enabled
+  sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -int $enabled
+  sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdateRestartRequired -int $enabled
 }
 
 # Update Computer NetBIOS Host Name
