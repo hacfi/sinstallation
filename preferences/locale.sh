@@ -29,12 +29,14 @@ function osx_locale_measurement_unit {
 
 function osx_locale_24_hour_clock {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="H"; else enabled="h"; fi
+  local enabled_bool; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi
 
   defaults delete NSGlobalDomain AppleICUTimeFormatStrings
   defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "1" "${enabled}:mm"
   defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "2" "${enabled}:mm:ss"
   defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "3" "${enabled}:mm:ss z"
   defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "4" "${enabled}:mm:ss zzzz"
+  defaults write NSGlobalDomain AppleICUForce24HourTime   -bool $enabled_bool
 
   osx_menu_bar_date "E d  ${enabled}:mm"
 }
