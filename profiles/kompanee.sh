@@ -17,6 +17,6 @@ add_login_items
 set_keyboard_shortcuts
 secure
 
-sudo duti $PWD/profiles/kompanee/default_applications.duti
+sudo /usr/local/bin/duti $PWD/profiles/kompanee/default_applications.duti
 
 cleanup
