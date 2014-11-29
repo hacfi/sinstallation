@@ -57,10 +57,8 @@ function osx_system_crash_reporter {
 # Toggle Whether to Save New Documents to iCloud by Default
 function osx_system_save_documents_to_icloud_by_default {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi
-  local enabled_neg; if [[ "$1" == "enabled" ]]; then enabled_neg="false"; else enabled_neg="true"; fi
 
   defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool $enabled
-  defaults write kCFPreferencesCurrentApplication com.apple.PreferenceSync.ExcludeAllSyncKeys -bool $enabled_neg
 }
 
 # Toggle Whether to Save Windows and Positions when Restarting/Quitting
