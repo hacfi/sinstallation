@@ -5,9 +5,9 @@
 source './keyboard_shortcuts.sh'
 
 function osx_spotlight {
-  local enabled; if [[ "$1" == "enabled" ]]; then enabled="on";  else enabled="off";   fi
-  local loaded;  if [[ "$1" == "enabled" ]]; then loaded="load"; else loaded="unload"; fi
+  local enabled;      if [[ "$1" == "enabled" ]]; then enabled="on";   else enabled="off";   fi
   local enabled_bool; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi
+  local loaded;       if [[ "$1" == "enabled" ]]; then loaded="load";  else loaded="unload"; fi
   shift 1;
 
   # Change indexing order and disable some search results
