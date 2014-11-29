@@ -3,7 +3,7 @@
 ################################################################################
 
 function osx_security_system_preference_lock {
-  local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi; shift 1;
+  local enabled; if [[ "$1" == "enabled" ]]; then enabled="false"; else enabled="true"; fi; shift 1;
 
   sudo sh -c "$path_to_plistbuddy -c 'Delete :rights:system.preferences:shared' /etc/authorization 2> /dev/null"
   sudo sh -c "$path_to_plistbuddy -c 'Add :rights:system.preferences:shared bool ${enabled}' /etc/authorization"
