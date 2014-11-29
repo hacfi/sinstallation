@@ -2,9 +2,12 @@
 #                                   Spotlight
 ################################################################################
 
+source './keyboard_shortcuts.sh'
+
 function osx_spotlight {
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="on";  else enabled="off";   fi
   local loaded;  if [[ "$1" == "enabled" ]]; then loaded="load"; else loaded="unload"; fi
+  local enabled_bool; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi
   shift 1;
 
   # Change indexing order and disable some search results
@@ -46,4 +49,10 @@ function osx_spotlight {
     sudo mdutil -a -E
     sudo chmod 777 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
   fi
+
+  local spotlight_keyboard_shortcut_ids=(64 65)
+
+  for keyboard_shortcut_id in "${spotlight_keyboard_shortcut_ids[@]}"; do
+    osx_keyboard_shortcut_toggle $keyboard_shortcut_id $enabled_bool
+  done
 }
