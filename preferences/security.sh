@@ -7,6 +7,10 @@ function osx_security_system_preference_lock {
 
   sudo sh -c "$path_to_plistbuddy -c 'Delete :rights:system.preferences:shared' /etc/authorization 2> /dev/null"
   sudo sh -c "$path_to_plistbuddy -c 'Add :rights:system.preferences:shared bool ${enabled}' /etc/authorization"
+
+  sudo sh -c 'security authorizationdb read system.preferences > /tmp/system.preferences.plist'
+  sudo sh -c "defaults write /tmp/system.preferences.plist shared -bool $enabled"
+  sudo sh -c 'security authorizationdb write system.preferences < /tmp/system.preferences.plist'
 }
 
 function osx_security_auditing {
