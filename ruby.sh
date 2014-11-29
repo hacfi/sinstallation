@@ -28,7 +28,7 @@ function install_rbenv_plugin {
 function install_or_upgrade_gem {
   local gem_name="$1"; shift 1;
 
-  if $RBENV_ROOT/shims/gem list | /usr/bin/grep -e "^$gem_name\s"; then
+  if [ -z "`$RBENV_ROOT/shims/gem list | /usr/bin/grep -e \"^$gem_name\s\"`" ]; then
     gem install --no-ri --no-rdoc $gem_name
   else
     gem update --no-ri --no-rdoc $gem_name
