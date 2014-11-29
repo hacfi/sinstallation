@@ -23,6 +23,7 @@ function osx_keyboard_text_substitution {
   defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool $enabled
   defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool $enabled
   defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool $enabled
+  defaults write NSGlobalDomain WebAutomaticSpellingCorrectionEnabled -bool $enabled
   defaults write NSGlobalDomain WebAutomaticDashSubstitutionEnabled -bool $enabled
   defaults write NSGlobalDomain WebAutomaticTextReplacementEnabled -bool $enabled
   defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool $enabled
