@@ -4,6 +4,7 @@ source './profiles/kompanee/apps.sh'
 source './profiles/kompanee/directories.sh'
 source './profiles/kompanee/preferences.sh'
 source './profiles/kompanee/login_items.sh'
+source './profiles/kompanee/keyboard_shortcuts.sh'
 source './profiles/kompanee/security.sh'
 source './profiles/kompanee/cleanup.sh'
 
