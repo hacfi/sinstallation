@@ -24,7 +24,7 @@ function osx_time_machine_local_backups {
 }
 
 function osx_time_machine_add_exclusion {
-  defaults write /Library/Preferences/com.apple.TimeMachine SkipPaths -array-add "$1"
+  sudo defaults write /Library/Preferences/com.apple.TimeMachine SkipPaths -array-add "$1"
   sudo tmutil addexclusion -p "$1"
 }
 
