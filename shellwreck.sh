@@ -11,6 +11,12 @@ function install_shellwreck {
     chown `whoami`:staff "$HOME/.ssh"
   fi
 
+  if ! [ -d $HOME/.ssh ]; then
+    mkdir "$HOME/.gnupg"
+    chmod 700 "$HOME/.gnupg"
+    chown `whoami`:staff "$HOME/.gnupg"
+  fi
+
   if [ -d $HOME/.shell/.git ]; then
     cd $HOME/.shell && git pull
   else
