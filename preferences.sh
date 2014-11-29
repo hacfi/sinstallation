@@ -10,6 +10,8 @@ END
 function osx_preferences_apply {
   echo "Resetting Apps For Preferences to Take Effect"
 
+  osx_preferences_synchronize com.apple.finder
+
   for app in 'Activity Monitor'\
              'Calendar'\
              'Contacts'\

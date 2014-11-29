@@ -9,8 +9,6 @@ function osx_disk_images_auto_mount {
   defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool $enabled
   defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool $enabled
   defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool $enabled
-
-  osx_preferences_synchronize com.apple.finder
 }
 
 # Toggle the Verification of Disk Images

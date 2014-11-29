@@ -83,8 +83,6 @@ function osx_finder_date_format {
   $path_to_plistbuddy -c "Add :ComputerViewSettings:ListViewSettings:useRelativeDates string ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
   $path_to_plistbuddy -c "Delete :ComputerViewSettings:ExtendedListViewSettings:useRelativeDates" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
   $path_to_plistbuddy -c "Add :ComputerViewSettings:ExtendedListViewSettings:useRelativeDates string ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
-
-  osx_preferences_synchronize com.apple.finder
 }
 
 function osx_finder_show_recent_tags_in_sidebar {
@@ -183,8 +181,6 @@ function osx_finder_icon_arrangement {
   $path_to_plistbuddy -c "Add :StandardViewSettings:IconViewSettings:arrangeBy string ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
   $path_to_plistbuddy -c "Delete :ComputerViewSettings:IconViewSettings:arrangeBy" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
   $path_to_plistbuddy -c "Add :ComputerViewSettings:IconViewSettings:arrangeBy string ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
-
-  osx_preferences_synchronize com.apple.finder
 }
 
 # Remove All Existing Icon Previews
@@ -213,8 +209,6 @@ function osx_finder_icon_previews {
   $path_to_plistbuddy -c "Add :ComputerViewSettings:ExtendedListViewSettings:showIconPreview bool ${enabled}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
 
   defaults delete com.apple.finder FXRecentFolders 2> /dev/null
-
-  osx_preferences_synchronize com.apple.finder
 }
 
 # Toggles Whether Springing is Enabled
@@ -302,6 +296,4 @@ function osx_finder_icon_view_icon_size_and_spacing {
   $path_to_plistbuddy -c "Add :ComputerViewSettings:IconViewSettings:gridSpacing integer $spacing" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
   $path_to_plistbuddy -c "Delete :FK_DefaultIconViewSettings:gridSpacing" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
   $path_to_plistbuddy -c "Add :FK_DefaultIconViewSettings:gridSpacing integer $spacing" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
-
-  osx_preferences_synchronize com.apple.finder
 }

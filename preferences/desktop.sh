@@ -38,6 +38,4 @@ function osx_desktop_icon_size {
 
   $path_to_plistbuddy -c "Delete :DesktopViewSettings:IconViewSettings:gridSpacing" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
   $path_to_plistbuddy -c "Add :DesktopViewSettings:IconViewSettings:gridSpacing integer $grid_spacing" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
-
-  osx_preferences_synchronize com.apple.finder
 }
