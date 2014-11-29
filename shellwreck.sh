@@ -15,6 +15,8 @@ function install_shellwreck {
     cd $HOME/.shell && git pull
   else
     git clone https://github.com/jfelchner/shellwreck.git $HOME/.shell
+    cd $HOME/.shell
+    git submodule update --init
   fi
 
   $HOME/.shell/bin/install
