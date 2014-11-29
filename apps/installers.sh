@@ -35,8 +35,8 @@ function install_or_upgrade_app {
   local app_name="$1"; shift 1;
 
   if $(brew cask list | grep $app_name); then
-    brew upgrade $app_name
+    brew cask upgrade $app_name
   else
-    brew install $app_name
+    brew cask install $app_name
   fi
 }
