@@ -50,9 +50,6 @@ function set_preferences {
   # Keyboard
   osx_keyboard_default_to_alternate_function_keys                           enabled
 
-  # Menu Bar
-  osx_menu_bar_airplay                                                      disabled
-
   # Spotlight
   osx_spotlight                                                             disabled
 
