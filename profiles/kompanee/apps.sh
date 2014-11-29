@@ -13,6 +13,7 @@ function install_apps {
   install_or_upgrade_package colormake
   install_or_upgrade_package coreutils
   install_or_upgrade_package ctags
+  install_or_upgrade_package duti
   install_or_upgrade_package fasd
   install_or_upgrade_package git
   install_or_upgrade_package git-extras

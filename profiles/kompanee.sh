@@ -14,4 +14,7 @@ create_directory_structure
 set_preferences
 add_login_items
 secure
+
+duti ./profiles/kompanee/default_applications.duti
+
 cleanup

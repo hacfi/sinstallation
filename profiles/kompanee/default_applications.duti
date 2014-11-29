@@ -1,0 +1,15 @@
+###
+# Register filetypes, extensions and MIME types with a given application
+#
+# Bundle ID                   UTI / Ext / MIME Type           Role
+
+com.google.chrome.canary      public.html                     all
+com.google.chrome.canary      public.xhtml                    all
+
+###
+# Register a specific URL scheme with a given application
+#
+# Bundle ID                   URL Scheme
+
+com.google.chrome.canary      http
+com.google.chrome.canary      https
