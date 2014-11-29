@@ -8,7 +8,7 @@ function osx_spotlight {
   shift 1;
 
   # Change indexing order and disable some search results
-  defaults write com.apple.spotlight orderedItems -array \
+  defaults write com.apple.Spotlight orderedItems -array \
     '{"enabled" = 0;"name" = "APPLICATIONS";}' \
     '{"enabled" = 0;"name" = "SYSTEM_PREFS";}' \
     '{"enabled" = 0;"name" = "DIRECTORIES";}' \
