@@ -13,6 +13,7 @@ install_apps
 create_directory_structure
 set_preferences
 add_login_items
+set_keyboard_shortcuts
 secure
 
 sudo duti $PWD/profiles/kompanee/default_applications.duti
