@@ -223,7 +223,6 @@ function set_preferences {
   osx_spaces_displays_have_separate_spaces                        enabled
 
   # System
-  osx_system_update_automatic_downloads                           disabled
   osx_system_update_local_cdn                                     disabled
   osx_system_app_quarantine                                       disabled
   osx_system_automatic_app_termination                            disabled
