@@ -25,6 +25,18 @@ function install_rbenv_plugin {
   clone_or_pull_repo $plugin_dir $plugin_repo
 }
 
+function install_or_upgrade_gem {
+  local gem_name="$1"; shift 1;
+
+  if $RBENV_ROOT/shims/gem list | /usr/bin/grep -e "^$gem_name\s"; then
+    gem install $gem_name
+  else
+    gem update $gem_name
+  fi
+
+  gem cleanup $gem_name
+}
+
 function install_ruby {
   export RBENV_ROOT=/usr/local/var/rbenv
 
@@ -41,20 +53,20 @@ function install_ruby {
     $RBENV_ROOT/bin/rbenv global 2.1.4
   fi
 
-  $RBENV_ROOT/shims/gem install awesome_print
-  $RBENV_ROOT/shims/gem install bundler
-  $RBENV_ROOT/shims/gem install gem-browse
-  $RBENV_ROOT/shims/gem install hash_syntax
-  $RBENV_ROOT/shims/gem install heroku
-  $RBENV_ROOT/shims/gem install overcommit
-  $RBENV_ROOT/shims/gem install pygmentize
-  $RBENV_ROOT/shims/gem install pygments.rb
-  $RBENV_ROOT/shims/gem install redcarpet
-  $RBENV_ROOT/shims/gem install rubocop
-  $RBENV_ROOT/shims/gem install rubygems-update
-  $RBENV_ROOT/shims/gem install scss-lint
-  $RBENV_ROOT/shims/gem install travis
-  $RBENV_ROOT/shims/gem install travis-lint
+  install_or_upgrade_gem awesome_print
+  install_or_upgrade_gem bundler
+  install_or_upgrade_gem gem-browse
+  install_or_upgrade_gem hash_syntax
+  install_or_upgrade_gem heroku
+  install_or_upgrade_gem overcommit
+  install_or_upgrade_gem pygmentize
+  install_or_upgrade_gem pygments.rb
+  install_or_upgrade_gem redcarpet
+  install_or_upgrade_gem rubocop
+  install_or_upgrade_gem rubygems-update
+  install_or_upgrade_gem scss-lint
+  install_or_upgrade_gem travis
+  install_or_upgrade_gem travis-lint
 
   $RBENV_ROOT/bin/rbenv alias --auto
 }
