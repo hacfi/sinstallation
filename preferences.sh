@@ -30,7 +30,7 @@ function osx_preferences_apply {
   done
 
   sudo touch /System/Library/Extensions
-  sudo killall -HUP mDNSResponder
+  sudo killall -HUP mDNSResponder > /dev/null 2>&1
 
   dscacheutil -flushcache
 
