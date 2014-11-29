@@ -41,7 +41,6 @@ function install_apps {
   install_or_upgrade_package reattach-to-user-namespace
   install_or_upgrade_package sqlite
   install_or_upgrade_package the_silver_searcher
-  install_or_upgrade_package tmate
   install_or_upgrade_package tmux
   install_or_upgrade_package wget
   install_or_upgrade_package zsh
