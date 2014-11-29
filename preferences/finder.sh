@@ -87,6 +87,12 @@ function osx_finder_date_format {
   osx_preferences_synchronize com.apple.finder
 }
 
+function osx_finder_show_recent_tags_in_sidebar {
+  local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi; shift 1;
+
+  defaults write com.apple.finder ShowRecentTags -bool $enabled
+}
+
 # Set the File View Mode Used By Default When Opening New Finder Windows
 #
 # Values: Nlsv, icnv, clmv, or Flwv

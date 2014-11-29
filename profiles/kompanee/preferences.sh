@@ -81,6 +81,7 @@ function set_preferences {
   osx_finder_icon_arrangement                                     grid
   osx_finder_springing                                            enabled 0.05
   osx_finder_info_pane_expansion                                  enabled
+  osx_finder_show_recent_tags_in_sidebar                          disabled
   osx_finder_icon_view_icon_size_and_spacing                      40 20 10
 
   # Firewall
