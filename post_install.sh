@@ -40,4 +40,3 @@ echo "      * Don't shut down your computer till FileVault completes"
 echo ""
 
 cd "$HOME"
-rm -rf "$HOME/sinstallation"
