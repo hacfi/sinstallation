@@ -72,17 +72,17 @@ function osx_finder_date_format {
   esac
 
   $path_to_plistbuddy -c "Delete :FK_StandardViewSettings:ListViewSettings:useRelativeDates" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
-  $path_to_plistbuddy -c "Add :FK_StandardViewSettings:ListViewSettings:useRelativeDates string ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
+  $path_to_plistbuddy -c "Add :FK_StandardViewSettings:ListViewSettings:useRelativeDates bool ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
   $path_to_plistbuddy -c "Delete :FK_StandardViewSettings:ExtendedListViewSettings:useRelativeDates" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
-  $path_to_plistbuddy -c "Add :FK_StandardViewSettings:ExtendedListViewSettings:useRelativeDates string ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
+  $path_to_plistbuddy -c "Add :FK_StandardViewSettings:ExtendedListViewSettings:useRelativeDates bool ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
   $path_to_plistbuddy -c "Delete :StandardViewSettings:ListViewSettings:useRelativeDates" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
-  $path_to_plistbuddy -c "Add :StandardViewSettings:ListViewSettings:useRelativeDates string ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
+  $path_to_plistbuddy -c "Add :StandardViewSettings:ListViewSettings:useRelativeDates bool ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
   $path_to_plistbuddy -c "Delete :StandardViewSettings:ExtendedListViewSettings:useRelativeDates" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
-  $path_to_plistbuddy -c "Add :StandardViewSettings:ExtendedListViewSettings:useRelativeDates string ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
+  $path_to_plistbuddy -c "Add :StandardViewSettings:ExtendedListViewSettings:useRelativeDates bool ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
   $path_to_plistbuddy -c "Delete :ComputerViewSettings:ListViewSettings:useRelativeDates" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
-  $path_to_plistbuddy -c "Add :ComputerViewSettings:ListViewSettings:useRelativeDates string ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
+  $path_to_plistbuddy -c "Add :ComputerViewSettings:ListViewSettings:useRelativeDates bool ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
   $path_to_plistbuddy -c "Delete :ComputerViewSettings:ExtendedListViewSettings:useRelativeDates" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist 2> /dev/null
-  $path_to_plistbuddy -c "Add :ComputerViewSettings:ExtendedListViewSettings:useRelativeDates string ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
+  $path_to_plistbuddy -c "Add :ComputerViewSettings:ExtendedListViewSettings:useRelativeDates bool ${mode}" /Users/$(whoami)/Library/Preferences/com.apple.finder.plist
 }
 
 function osx_finder_show_recent_tags_in_sidebar {
