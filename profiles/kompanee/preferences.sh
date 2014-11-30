@@ -127,13 +127,11 @@ function set_preferences {
   osx_login_style                                                 name_and_password
   osx_login_show_secure_users                                     disabled
 
-  for domain in $(find $HOME/Library/Preferences/ByHost -name 'com.apple.systemuiserver.*'); do
-    defaults write "${domain}" dontAutoLoad -array \
-      "/System/Library/CoreServices/Menu Extras/Volume.menu" \
-      "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-      "/System/Library/CoreServices/Menu Extras/User.menu" \
-      "/System/Library/CoreServices/Menu Extras/Displays.menu"
-  done
+  defaults -currentHost write com.apple.systemuiserver dontAutoLoad -array \
+    "/System/Library/CoreServices/Menu Extras/Volume.menu" \
+    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+    "/System/Library/CoreServices/Menu Extras/User.menu" \
+    "/System/Library/CoreServices/Menu Extras/Displays.menu"
 
   defaults write com.apple.systemuiserver menuExtras -array \
     "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
