@@ -11,9 +11,34 @@ function osx_spotlight {
   local loaded;       if [[ "$1" == "enabled" ]]; then loaded="load";       else loaded="unload"; fi
   shift 1;
 
-  sudo killall mds > /dev/null 2>&1
+  # Change indexing order and disable some search results
+  defaults write com.apple.Spotlight orderedItems -array \
+    "{'enabled' = $enabled_int;'name' = 'APPLICATIONS';}" \
+    "{'enabled' = $enabled_int;'name' = 'SYSTEM_PREFS';}" \
+    "{'enabled' = $enabled_int;'name' = 'DIRECTORIES';}" \
+    "{'enabled' = $enabled_int;'name' = 'PDF';}" \
+    "{'enabled' = $enabled_int;'name' = 'FONTS';}" \
+    "{'enabled' = $enabled_int;'name' = 'DOCUMENTS';}" \
+    "{'enabled' = $enabled_int;'name' = 'MESSAGES';}" \
+    "{'enabled' = $enabled_int;'name' = 'CONTACT';}" \
+    "{'enabled' = $enabled_int;'name' = 'EVENT_TODO';}" \
+    "{'enabled' = 0;           'name' = 'IMAGES';}" \
+    "{'enabled' = 0;           'name' = 'BOOKMARKS';}" \
+    "{'enabled' = 0;           'name' = 'MUSIC';}" \
+    "{'enabled' = 0;           'name' = 'MOVIES';}" \
+    "{'enabled' = 0;           'name' = 'PRESENTATIONS';}" \
+    "{'enabled' = 0;           'name' = 'SPREADSHEETS';}" \
+    "{'enabled' = 0;           'name' = 'SOURCE';}" \
+    "{'enabled' = 0;           'name' = 'MENU_DEFINITION';}" \
+    "{'enabled' = 0;           'name' = 'MENU_OTHER';}" \
+    "{'enabled' = 0;           'name' = 'MENU_CONVERSION';}" \
+    "{'enabled' = 0;           'name' = 'MENU_EXPRESSION';}" \
+    "{'enabled' = 0;           'name' = 'MENU_WEBSEARCH';}" \
+    "{'enabled' = 0;           'name' = 'MENU_SPOTLIGHT_SUGGESTIONS';}"
 
   sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+
+  sudo killall mds > /dev/null 2>&1
 
   if [[ "$enabled" == "off" || "$enabled" == "unload" ]]; then
     sudo sh -c "mdutil -a -E -i $enabled &> /dev/null"
@@ -25,31 +50,6 @@ function osx_spotlight {
     sudo mdutil -a -E
     sudo chmod 777 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
   fi
-
-  # Change indexing order and disable some search results
-  defaults write com.apple.Spotlight orderedItems -array \
-    "{\"enabled\" = $enabled_int; \"name\" = \"APPLICATIONS\";}" \
-    "{\"enabled\" = $enabled_int; \"name\" = \"SYSTEM_PREFS\";}" \
-    "{\"enabled\" = $enabled_int; \"name\" = \"DIRECTORIES\";}" \
-    "{\"enabled\" = $enabled_int; \"name\" = \"PDF\";}" \
-    "{\"enabled\" = $enabled_int; \"name\" = \"FONTS\";}" \
-    "{\"enabled\" = $enabled_int; \"name\" = \"DOCUMENTS\";}" \
-    "{\"enabled\" = $enabled_int; \"name\" = \"MESSAGES\";}" \
-    "{\"enabled\" = $enabled_int; \"name\" = \"CONTACT\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"EVENT_TODO\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"IMAGES\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"BOOKMARKS\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"MUSIC\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"MOVIES\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"PRESENTATIONS\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"SPREADSHEETS\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"SOURCE\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"MENU_DEFINITION\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"MENU_OTHER\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"MENU_CONVERSION\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"MENU_EXPRESSION\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"MENU_WEBSEARCH\";}" \
-    "{\"enabled\" = 0;            \"name\" = \"MENU_SPOTLIGHT_SUGGESTIONS\";}"
 
   local spotlight_keyboard_shortcut_ids=(64 65)
 
