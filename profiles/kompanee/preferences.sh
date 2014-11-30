@@ -131,7 +131,8 @@ function set_preferences {
     defaults write "${domain}" dontAutoLoad -array \
       "/System/Library/CoreServices/Menu Extras/Volume.menu" \
       "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-      "/System/Library/CoreServices/Menu Extras/User.menu"
+      "/System/Library/CoreServices/Menu Extras/User.menu" \
+      "/System/Library/CoreServices/Menu Extras/Displays.menu"
   done
 
   defaults write com.apple.systemuiserver menuExtras -array \
