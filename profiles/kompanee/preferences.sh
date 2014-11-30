@@ -184,7 +184,6 @@ function set_preferences {
 
   # Quicklook
   osx_quicklook_text_selection                                    enabled
-  osx_quicklook_xray_folders                                      enabled
   osx_quicklook_hide_on_deactivation                              disabled
 
   # Screen Capture
