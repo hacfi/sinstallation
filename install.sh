@@ -21,7 +21,7 @@ echo ''
 echo 'You should now be good to go to run sinstallation!'
 echo ''
 echo 'Press RETURN to continue'
-read -p
+read
 
 source "./bootstrap.sh"
 
