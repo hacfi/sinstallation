@@ -173,7 +173,7 @@ function osx_appearance_transparency {
 }
 
 function osx_appearance_dark_mode {
-  local mode;    if [[ "$1" == "enabled" ]]; then enabled="Dark"; else enabled="Light"; fi;
+  local mode;    if [[ "$1" == "enabled" ]]; then mode="Dark";    else mode="Light"; fi;
   local enabled; if [[ "$1" == "enabled" ]]; then enabled="true"; else enabled="false"; fi;
   shift 1;
 
