@@ -31,7 +31,7 @@ function osx_locale_24_hour_clock {
   local enabled;      if [[ "$1" == "enabled" ]]; then enabled="H"; else enabled="h"; fi
   local enabled_bool; if [[ "$1" == "enabled" ]]; then enabled_bool="true"; else enabled_bool="false"; fi
 
-  defaults delete NSGlobalDomain AppleICUTimeFormatStrings
+  defaults delete NSGlobalDomain AppleICUTimeFormatStrings > /dev/null 2&>1
   defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "1" "${enabled}:mm"
   defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "2" "${enabled}:mm:ss"
   defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "3" "${enabled}:mm:ss z"
@@ -43,7 +43,7 @@ function osx_locale_24_hour_clock {
 
 # Set short date to international format.
 function osx_locale_international_date_format_strings {
-  defaults delete NSGlobalDomain AppleICUDateFormatStrings
+  defaults delete NSGlobalDomain AppleICUDateFormatStrings > /dev/null 2&>1
   defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "1" "yyyy-MM-dd"
   defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "2" "yyyy MMM d"
   defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "3" "yyyy MMMM d"
