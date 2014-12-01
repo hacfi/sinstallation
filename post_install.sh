@@ -11,6 +11,8 @@ rm -rf $HOME/.distlib
 
 echo ""
 echo "Manual Steps:"
+echo "  * Uninstall Flash:"
+echo "      http://helpx.adobe.com/flash-player/kb/uninstall-flash-player-mac-os.html"
 echo "  * Set your profile photo"
 echo "  * Switch Caps Lock to Control"
 echo "  * Setup Time Machine"
