@@ -4,8 +4,6 @@ function install_apps {
   # install_adobe_creative_suite
   install_or_upgrade_app    'airserver'
   install_or_upgrade_app    'araxis-merge'
-  install_or_upgrade_app    'comicbooklover'
-  install_or_upgrade_app    'comicbookloversync'
   install_or_upgrade_app    'handbrake'
   install_mac_app_store_app 'Kindle.app'
   install_or_upgrade_app    'launchbar'
@@ -22,6 +20,7 @@ function install_apps {
   install_or_upgrade_app    'scansnap-manager'
   install_or_upgrade_app    'screenflow'
   install_mac_app_store_app 'Shush.app'
+  install_or_upgrade_app    'simple-comic'
   install_or_upgrade_app    'sixtyforce'
   install_or_upgrade_app    'snes9x'
   install_or_upgrade_app    'steam'
