@@ -25,7 +25,7 @@ function install_apps {
   install_or_upgrade_app    'snes9x'
   install_or_upgrade_app    'steam'
   install_mac_app_store_app 'Textual.app'
+  install_or_upgrade_app    'transmission'
   install_mac_app_store_app 'Tweetbot.app'
-  install_or_upgrade_app    'utorrent-beta'
   install_or_upgrade_app    'vitamin-r'
 }
