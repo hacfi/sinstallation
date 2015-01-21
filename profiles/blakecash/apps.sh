@@ -1,5 +1,5 @@
 source './apps/installers.sh'
 
 function install_apps {
-  local nothing_here="to see"
+  install_or_upgrade_app    'google-drive'
 }
